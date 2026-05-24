@@ -3,61 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP - 官方直購</title>
+    <title>IAD SHOP 官方直購</title>
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; background: #fff; }
-        .container { max-width: 480px; margin: 0 auto; padding-bottom: 50px; }
-        .header { background: #000; color: #fff; text-align: center; padding: 15px; font-weight: bold; }
-        .form-section { padding: 20px; }
-        label { display: block; font-size: 13px; color: #666; margin-bottom: 5px; }
-        input, select, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-        button { width: 100%; padding: 15px; background: #000; color: #fff; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; }
+        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #f4f4f4; }
+        .container { max-width: 640px; margin: 0 auto; background: #fff; }
+        /* 讓 iframe 響應式，自動適應寬度 */
+        .form-wrapper { width: 100%; position: relative; }
+        iframe { width: 100%; height: 1250px; border: none; display: block; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">IAD SHOP</div>
-
-    <div class="form-section">
-        <h3>填寫收件資料</h3>
-        <form id="orderForm">
-            <label>姓名</label>
-            <input type="text" name="name" placeholder="請輸入姓名" required>
-            
-            <label>手機</label>
-            <input type="tel" name="phone" placeholder="請輸入手機" required>
-            
-            <label>選擇款式</label>
-            <select name="style">
-                <option value="款A">款式 A</option>
-                <option value="款B">款式 B</option>
-            </select>
-
-            <label>超商資訊</label>
-            <input type="text" name="store" placeholder="請輸入門市名稱或代碼" required>
-
-            <button type="submit" id="submitBtn">送出訂單</button>
-        </form>
+    <div class="form-wrapper">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjrOjrxJ5bxec29XuZos1mxfvb7HpsCCSinuYy1FD5vAp__Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
     </div>
 </div>
 
-<script>
-    // 這裡放入你之前部署好的 Google Apps Script 網址
-    const scriptURL = '【貼上你的網址】';
-    
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const btn = document.getElementById('submitBtn');
-        btn.innerText = '處理中...';
-        
-        fetch(scriptURL, { method: 'POST', body: new FormData(this) })
-            .then(() => {
-                alert('訂單已收到！');
-                this.reset();
-                btn.innerText = '送出訂單';
-            });
-    });
-</script>
 </body>
 </html>
