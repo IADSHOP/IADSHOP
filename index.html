@@ -3,60 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[IAD SHOP] BASIC CROPPED WM003</title>
+    <title>[IAD SHOP] 直購結帳專區</title>
     <style>
-        *, *::before, *::after { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #fafafa; color: #222; }
-        .container { max-width: 480px; margin: 0 auto; background: #ffffff; min-height: 100vh; padding-bottom: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        .header { background-color: #111; color: #fff; text-align: center; padding: 15px; font-weight: bold; letter-spacing: 1px; font-size: 14pt; }
-        .promo-banner { background-color: #fff0f0; border-top: 1px solid #ffcccc; border-bottom: 1px solid #ffcccc; padding: 12px; text-align: center; color: #d9534f; font-weight: bold; font-size: 11pt; }
+        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #fafafa; }
+        .container { max-width: 480px; margin: 0 auto; background: #ffffff; min-height: 100vh; padding-bottom: 50px; }
+        .header { background-color: #111; color: #fff; text-align: center; padding: 15px; font-weight: bold; }
+        .promo-banner { background: #fff0f0; color: #d9534f; padding: 15px; text-align: center; font-weight: bold; }
         
-        /* 圖片輪播 */
-        .slider-wrapper { position: relative; width: 100%; overflow: hidden; background: #000; }
-        .slider-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
-        .slider-item { flex: 0 0 100%; width: 100%; scroll-snap-align: start; }
+        /* 圖片滑動區塊 */
+        .slider-wrapper { width: 100%; overflow-x: auto; display: flex; scroll-snap-type: x mandatory; }
+        .slider-item { flex: 0 0 100%; scroll-snap-align: start; }
         .slider-img { width: 100%; display: block; }
 
-        /* 結帳區塊 */
-        .checkout-section { padding: 20px; background: #fff; }
-        .pay-method { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #eee; }
-        .pay-title { font-weight: bold; font-size: 11pt; margin-bottom: 5px; color: #333; }
-        .pay-info { font-size: 10pt; color: #666; }
-        .pay-img { width: 100%; max-width: 200px; display: block; margin-top: 10px; }
-
-        /* 嵌入表單區塊 */
-        .form-container { margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px; }
-        iframe { width: 100%; height: 800px; border: none; }
+        /* 付款與表單區塊 */
+        .section { padding: 20px; border-top: 1px solid #eee; }
+        .pay-box { background: #f9f9f9; padding: 15px; margin-bottom: 10px; border-radius: 8px; font-size: 14px; }
+        .pay-img { width: 100%; max-width: 250px; display: block; margin-top: 10px; }
+        
+        /* 內嵌表單設定 */
+        .form-area { margin-top: 20px; }
+        iframe { width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">IAD SHOP</div>
-    <div class="promo-banner">🔥 VIP直購專屬回饋價 任選2件享$449免運</div>
+    <div class="promo-banner">🔥 VIP直購價：任選 2 件享 $449 免運</div>
 
-    <div class="checkout-section">
-        <h2 style="text-align: center;">💳 選擇付款方式</h2>
-        
-        <div class="pay-method">
-            <div class="pay-title">1. 銀行匯款 (ATM)</div>
-            <div class="pay-info">銀行代碼：822 (中國信託)<br>匯款帳號：1234-5678-9012</div>
+    <div class="slider-wrapper">
         </div>
 
-        <div class="pay-method">
-            <div class="pay-title">2. 信用卡結帳</div>
-            <img src="https://i.urusai.cc/Y8wor.jpg" class="pay-img" alt="信用卡">
+    <div class="section">
+        <h3>💳 請選擇付款方式</h3>
+        <div class="pay-box">
+            <p><strong>1. 銀行匯款 (ATM)</strong><br>銀行代碼：822 (中國信託)<br>帳號：1234-5678-9012</p>
         </div>
-
-        <div class="pay-method">
-            <div class="pay-title">3. LINE Pay 付款</div>
-            <img src="https://i.urusai.cc/It3DW.jpg" class="pay-img" alt="LINE Pay">
+        <div class="pay-box">
+            <p><strong>2. 信用卡付款</strong></p>
+            <img src="https://i.urusai.cc/Y8wor.jpg" class="pay-img">
+        </div>
+        <div class="pay-box">
+            <p><strong>3. LINE Pay</strong></p>
+            <img src="https://i.urusai.cc/It3DW.jpg" class="pay-img">
         </div>
     </div>
 
-    <div class="form-container">
-        <h3 style="text-align: center;">📝 填寫訂單資訊</h3>
-        <iframe src="你的GOOGLE表單嵌入連結(URL)" title="訂單表單"></iframe>
+    <div class="section form-area">
+        <h3>📝 填寫收件資料</h3>
+        <iframe src="你的Google表單嵌入連結"></iframe>
     </div>
 </div>
 
