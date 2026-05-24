@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP 官方直購</title>
+    <title>IAD SHOP | 官方直購頁面</title>
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #f4f4f4; }
-        .container { max-width: 640px; margin: 0 auto; background: #fff; }
-        /* 讓 iframe 響應式，自動適應寬度 */
-        .form-wrapper { width: 100%; position: relative; }
-        iframe { width: 100%; height: 1250px; border: none; display: block; }
+        /* 1. 基本樣式設定 */
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #000; color: #fff; }
+        .container { max-width: 500px; margin: 0 auto; background-color: #fff; color: #000; min-height: 100vh; }
+        
+        /* 2. 店名 Header */
+        .header { background-color: #000; color: #fff; text-align: center; padding: 20px; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
+        
+        /* 3. 活動資訊標語 */
+        .banner { background-color: #ff4d4d; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; }
+
+        /* 4. 商品圖片區 (這裡放你從 Urusai.cc 拿到的網址) */
+        .product-images { width: 100%; }
+        .product-images img { width: 100%; display: block; }
+
+        /* 5. 表單區塊 */
+        .form-section { padding: 0; background-color: #f9f9f9; }
+        .form-title { padding: 20px 20px 0 20px; font-size: 18px; font-weight: bold; border-left: 5px solid #000; margin: 20px; color: #000; }
+        
+        /* 讓 Google 表單自動適應手機寬度 */
+        .iframe-container { width: 100%; position: relative; overflow: hidden; }
+        iframe { width: 100%; height: 1300px; border: none; }
+
+        .footer { text-align: center; padding: 30px; font-size: 12px; color: #999; background: #fff; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="form-wrapper">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjrOjrxJ5bxec29XuZos1mxfvb7HpsCCSinuYy1FD5vAp__Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+    <div class="header">IAD SHOP</div>
+
+    <div class="banner">🔥 慶祝官網上線：任選兩件享免運優惠 🔥</div>
+
+    <div class="product-images">
+        <img src="這裡貼上第一張圖的網址" alt="商品照1">
+        <img src="這裡貼上第二張圖的網址" alt="商品照2">
+        <img src="這裡貼上第三張圖的網址" alt="商品照3">
+    </div>
+
+    <div class="form-title">📝 請填寫下方訂購資料</div>
+
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjrOjrxJ5bxec29XuZos1mxfvb7HpsCCSinuYy1FD5vAp__Q/viewform?embedded=true">載入中…</iframe>
+    </div>
+
+    <div class="footer">
+        © 2024 IAD SHOP Official Website<br>
+        資料傳輸已受 SSL 加密保護
     </div>
 </div>
 
