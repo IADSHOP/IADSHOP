@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAD SHOP | 熟客限定回購特惠</title>
+    <style>
+        /* 基礎潮流風格設定 */
+        body {
+            font-family: "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+        }
+        /* 上半部：商品展示 */
+        .header {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .product-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .product-info {
+            padding: 25px;
+        }
+        .product-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .price-tag {
+            color: #e63946;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #ffe3e5;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .features {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 30px 0;
+        }
+
+        /* 下半部：匯款與金流區 */
+        .payment-section {
+            padding: 25px;
+            background-color: #fafafa;
+            border-top: 2px dashed #ddd;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            border-left: 5px solid #111;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        .bank-info {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .bank-info p {
+            margin: 8px 0;
+        }
+        .qrcode-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .qrcode-img {
+            width: 180px;
+            height: 180px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            background: #fff;
+        }
+
+        /* 最下方：回傳按鈕 */
+        .action-section {
+            padding: 25px;
+            text-align: center;
+        }
+        .btn {
+            display: block;
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .btn-line {
+            background-color: #06C755;
+        }
+        .btn-line:hover {
+            background-color: #05b04b;
+        }
+        .btn-ig {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        .notice {
+            font-size: 13px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- 店名標題 -->
+    <div class="header">IAD SHOP PREMIUM</div>
+
+    <!-- 上半部：商品與價格 -->
+    <!-- 這裡的圖片網址可以換成客戶的商品圖 -->
+    <img class="product-img" src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600" alt="商品圖片">
+    
+    <div class="product-info">
+        <div class="product-title">【熟客回購限定】City Boy 街頭寬鬆硬挺工裝褲</div>
+        <p style="color:#666; margin:0;">感謝您在蝦皮的支持！原價 $680，包裹熟客回購享 75 折！</p>
+        
+        <div class="price-tag">回購私域價：$499 (全館滿千免運)</div>
+        
+        <div class="features">
+            <strong>🔥 商品三大必買特點：</strong>
+            <ul>
+                <li><strong>極致硬挺：</strong> 採用 100% 密織重磅純棉，挺度破表不貼腿。</li>
+                <li><strong>防潑水抗髒：</strong> 布料經微奈米防潑水處理，雨天出門也不怕。</li>
+                <li><strong>日系寬鬆版型：</strong> 上寬下窄微錐形修飾，任何身型都能輕鬆駕馭。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 下半部：金流結帳區 -->
+    <div class="payment-section">
+        <div class="section-title">💰 請選擇付款方式</div>
+        
+        <!-- 方式一：ATM匯款 -->
+        <div class="bank-info">
+            <strong style="color:#e63946;">【方式 A：ATM 銀行轉帳】</strong>
+            <p>銀行代碼：822 (中國信託)</p>
+            <p>銀行帳號：123-456789-012</p>
+            <p>商品金額 $499 + 運費 $60 = <strong>總匯款金額 $559</strong></p>
+        </div>
+
+        <!-- 方式二：線上刷卡 QR Code -->
+        <div class="bank-info">
+            <strong style="color:#007bff;">【方式 B：手機線上刷卡】</strong>
+            <p>請用手機截圖此 QR Code，或用另一台手機掃描即可線上刷卡付款。</p>
+            <div class="qrcode-box">
+                <!-- 這裡放客戶綠界或藍新的付款 QR Code 圖片 -->
+                <img class="qrcode-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iadshop.github.io" alt="刷卡QR Code範例">
+                <p style="font-size: 12px; color:#999; margin:5px 0 0 0;">（此為刷卡代收示意圖）</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 最下方：付款完畢回傳通知 -->
+    <div class="action-section">
+        <div class="section-title" style="border-left-color: #28a745;">✅ 付款完成？請點擊回傳資料</div>
+        <p style="font-size: 14px; color:#555; margin-bottom: 20px;">請匯款或刷卡完成後，點擊下方按鈕告知我們「後五碼」與「收件地址」，我們將於24小時內為您安排出貨！</p>
+        
+        <!-- 這裡的 href 網址可以改成客戶的 LINE 或 IG 連結 -->
+        <a href="https://line.me" target="_blank" class="btn btn-line">💬 透過 LINE 官方帳號回傳</a>
+        <a href="https://instagram.com" target="_blank" class="btn btn-ig">📸 透過 IG 私訊回傳</a>
+        
+        <p class="notice">💡 貼心提醒：本官網由 IAD SHOP 熟客系統代管，交易安全有保障。</p>
+    </div>
+
+</div>
+
+</body>
+</html>
