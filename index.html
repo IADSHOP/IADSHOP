@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP - 官方直購</title>
+    <title>IAD SHOP - 官方直購專區</title>
     <style>
+        *, *::before, *::after { box-sizing: border-box; }
         body { margin: 0; padding: 0; font-family: sans-serif; background-color: #fafafa; }
         .container { max-width: 480px; margin: 0 auto; background: #ffffff; min-height: 100vh; padding-bottom: 50px; }
-        .header { background-color: #111; color: #fff; text-align: center; padding: 15px; font-weight: bold; }
-        .promo-banner { background: #fff0f0; color: #d9534f; padding: 15px; text-align: center; font-weight: bold; }
+        .header { background-color: #111; color: #fff; text-align: center; padding: 15px; font-weight: bold; font-size: 18px; }
+        .promo-banner { background: #fff0f0; color: #d9534f; padding: 15px; text-align: center; font-weight: bold; font-size: 16px; border-bottom: 2px solid #ffcccc; }
         
+        /* 圖片輪播區塊 */
         .slider-wrapper { width: 100%; overflow-x: auto; display: flex; scroll-snap-type: x mandatory; background: #000; }
         .slider-item { flex: 0 0 100%; scroll-snap-align: start; }
         .slider-img { width: 100%; display: block; }
 
-        .section { padding: 20px; border-top: 1px solid #eee; }
-        .pay-box { background: #f9f9f9; padding: 15px; margin-bottom: 10px; border-radius: 8px; font-size: 14px; }
+        /* 內容區塊 */
+        .section { padding: 25px 20px; border-bottom: 1px solid #eee; }
+        h3 { margin-top: 0; margin-bottom: 15px; color: #333; font-size: 18px; border-left: 4px solid #111; padding-left: 10px; }
+        .pay-box { background: #f9f9f9; padding: 15px; margin-bottom: 15px; border-radius: 8px; font-size: 14px; line-height: 1.6; border: 1px solid #eee; }
         .pay-img { width: 100%; max-width: 250px; display: block; margin-top: 10px; }
-
-        /* 關鍵：讓表單內嵌看起來像網站本身的一部分 */
-        .embed-container { margin-top: 20px; width: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 950px; border: none; }
+        
+        /* 結帳按鈕 */
+        .order-btn { display: block; width: 100%; max-width: 320px; margin: 20px auto; background: #00c300; color: #fff; padding: 20px; text-align: center; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 50px; box-shadow: 0 4px 10px rgba(0,195,0,0.3); }
     </style>
 </head>
 <body>
@@ -32,18 +35,26 @@
     <div class="slider-wrapper">
         <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-7ra0u-mc4ztb9oqzqh1d"></div>
         <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-81ztd-mgxddg2apkw830"></div>
-        </div>
+        <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-81ztg-mgdgbk7mhurw96"></div>
+        <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-7ra0l-mbz6g8rby5o9e9"></div>
+        <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-7ra0m-mc4zssq3vwa2a2"></div>
+        <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-81ztf-mgcdejpzipe7fa"></div>
+        <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-81tk-mh4jy9aapmhaef"></div>
+        <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-81zto-mgcde39m2g3vf7"></div>
+        <div class="slider-item"><img class="slider-img" src="https://down-tw.img.susercontent.com/tw-11134207-7ra0u-mc4ztb9oqzqh1d"></div>
+    </div>
 
     <div class="section">
         <h3>💳 請選擇付款方式</h3>
-        <div class="pay-box"><strong>1. 銀行匯款 (ATM)</strong><br>822 中國信託 | 帳號：1234-5678-9012</div>
+        <div class="pay-box"><strong>1. 銀行匯款 (ATM)</strong><br>銀行：822 中國信託<br>帳號：1234-5678-9012</div>
         <div class="pay-box"><strong>2. 信用卡付款</strong><br><img src="https://i.urusai.cc/Y8wor.jpg" class="pay-img"></div>
         <div class="pay-box"><strong>3. LINE Pay</strong><br><img src="https://i.urusai.cc/It3DW.jpg" class="pay-img"></div>
     </div>
 
-    <div class="section embed-container">
+    <div class="section" style="text-align: center;">
         <h3>📝 填寫收件資料</h3>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdp6j8x4G06y-Gv72d-P_y5y7YVwG5o5-uS1d-S6oOqC5J15A/viewform?embedded=true">Loading...</iframe>
+        <a href="https://forms.gle/zwceD1RymsTCNnGp8" target="_blank" class="order-btn">🛍️ 立即點我填單結帳</a>
+        <p style="font-size: 13px; color: #888;">※ 填單後請務必完成付款，系統將自動核對。</p>
     </div>
 </div>
 
