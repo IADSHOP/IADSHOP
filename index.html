@@ -5,69 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAD SHOP | 官方訂購頁</title>
     <style>
-        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f8f8f8; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; background-color: #fff; min-height: 100vh; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        .header { background-color: #000; color: #fff; text-align: center; padding: 20px; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
-        .banner { background-color: #ff4d4d; color: #fff; text-align: center; padding: 12px; font-weight: bold; font-size: 15px; }
+        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background-color: #f8f8f8; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        .header { background: #000; color: #fff; text-align: center; padding: 20px; font-weight: 900; letter-spacing: 2px; }
+        .banner { background: #ff4d4d; color: #fff; text-align: center; padding: 12px; font-weight: bold; }
         
-        .section { padding: 25px 20px; border-bottom: 1px solid #eee; }
+        .section { padding: 20px; border-bottom: 1px solid #eee; }
         .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
         
-        .product-images img { width: 100%; display: block; border-radius: 8px; margin-bottom: 10px; }
-        
-        /* 付款資訊樣式 */
-        .payment-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-        .payment-box h3 { margin-top: 0; font-size: 16px; color: #333; }
-        .qr-code { width: 100%; max-width: 200px; display: block; margin: 10px auto; border: 1px solid #eee; }
-        .info-text { font-size: 14px; color: #555; line-height: 1.8; }
-        .highlight { color: #d00; font-weight: bold; }
+        /* 輪播圖樣式 */
+        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; scrollbar-width: none; }
+        .carousel::-webkit-scrollbar { display: none; }
+        .carousel img { flex: 0 0 100%; width: 100%; scroll-snap-align: start; border-radius: 8px; }
 
-        .order-form-section { padding: 20px; background-color: #fff; }
+        /* 付款與表單樣式延續 */
+        .payment-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .qr-code { width: 100%; max-width: 200px; display: block; margin: 10px auto; }
+        .highlight { color: #d00; font-weight: bold; }
         iframe { width: 100%; height: 1200px; border: none; }
-        .footer { text-align: center; padding: 30px; font-size: 12px; color: #999; background: #eee; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">IAD SHOP</div>
-    <div class="banner">🔥 慶祝官網上線：任選兩件享免運優惠 🔥</div>
+    <div class="banner">VIP專屬直購優惠價 2件$449免運</div>
 
     <div class="section">
-        <div class="section-title">產品展示</div>
-        <div class="product-images">
-            <img src="請放入你的產品主圖網址" alt="商品展示">
+        <div class="section-title">商品展示</div>
+        <div class="carousel">
+            <img src="https://i.urusai.cc/cs3Qp.jpg"><img src="https://i.urusai.cc/ZrdLl.jpg">
+            <img src="https://i.urusai.cc/4HKjr.jpg"><img src="https://i.urusai.cc/imSXD.jpg">
+            <img src="https://i.urusai.cc/UNNqu.jpg"><img src="https://i.urusai.cc/OT2TB.jpg">
+            <img src="https://i.urusai.cc/dXnTy.jpg"><img src="https://i.urusai.cc/D0jMW.jpg">
+            <img src="https://i.urusai.cc/2TKKy.jpg"><img src="https://i.urusai.cc/wpakn.jpg">
         </div>
-        <p class="info-text">版型極佳、純棉親膚，修身顯瘦不顯壯，是您衣櫃必備的基本款。</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">尺寸表與試穿報告</div>
+        <div class="carousel">
+            <img src="https://i.urusai.cc/PtfVX.jpg"><img src="https://i.urusai.cc/p9s8X.jpg">
+        </div>
     </div>
 
     <div class="section">
         <div class="section-title">付款資訊</div>
-        <p class="info-text">付款後 4-9 個工作天送達。如遇特殊狀況，將依填寫資料進行退款。</p>
-
         <div class="payment-box">
-            <h3>1. 轉帳匯款</h3>
-            <p class="info-text">
-                永豐銀行 (807)<br>
-                帳號：19201800126419<br>
-                戶名：網癮中年企業社<br>
-                <span class="highlight">※ 完成後請於訂單填寫帳號後 4 碼</span>
-            </p>
+            <h3>轉帳匯款 (807 永豐)</h3>
+            <p>帳號：19201800126419 | 戶名：網癮中年企業社</p>
         </div>
-
         <div class="payment-box">
-            <h3>2. LINEPAY 付款</h3>
-            <img src="https://i.urusai.cc/It3DW.jpg" class="qr-code" alt="LinePay">
-            <p class="info-text">1. 掃描左方 QRCODE<br>2. 輸入付款金額<br>3. <span class="highlight">填寫訂單時請備註手機後 3 碼</span></p>
+            <h3>LINEPAY 付款</h3>
+            <img src="https://i.urusai.cc/It3DW.jpg" class="qr-code">
         </div>
-
         <div class="payment-box">
-            <h3>3. 信用卡付款</h3>
-            <img src="https://i.urusai.cc/Y8wor.jpg" class="qr-code" alt="信用卡付款">
-            <p class="info-text">1. 掃描左方 QRCODE<br>2. 輸入付款金額<br>3. <span class="highlight">填寫訂單時請填寫卡號後 4 碼</span></p>
+            <h3>信用卡付款</h3>
+            <img src="https://i.urusai.cc/Y8wor.jpg" class="qr-code">
         </div>
     </div>
 
-    <div class="order-form-section">
+    <div class="section">
         <h2 style="text-align:center;">📝 填寫訂單資訊</h2>
-        <iframe src="https
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjrOjrxJ5bxec29XuZos1mxfvb7HpsCCSinuYy1FD5vAp__Q/viewform?embedded=true">載入中…</iframe>
+    </div>
+</div>
+
+</body>
+</html>
