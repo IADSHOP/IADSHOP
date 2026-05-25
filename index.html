@@ -1,53 +1,105 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP - 商品資訊</title>
-    <style>
-        body { font-family: sans-serif; background: #000; color: #fff; margin: 0; padding: 0; }
-        .container { max-width: 600px; margin: auto; padding: 20px; }
-        
-        /* 橫向滑動圖集 */
-        .slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; margin-bottom: 30px; }
-        .slider img { scroll-snap-align: center; width: 80%; border-radius: 8px; flex-shrink: 0; }
-        
-        /* 尺寸表與報告 */
-        .info-section img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
-        
-        .btn { display: block; background: #fff; color: #000; padding: 18px; margin: 30px 0; text-decoration: none; font-weight: bold; border-radius: 5px; text-align: center; font-size: 1.2em; }
-        .footer { border-top: 1px solid #333; padding: 20px 0; font-size: 0.8em; color: #777; text-align: center; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>IAD SHOP</h1>
-        
-        <!-- 九張圖穿搭滑動區 -->
-        <div class="slider">
-            <img src="https://i.urusai.cc/cs3Qp.jpg">
-            <img src="https://i.urusai.cc/ZrdLl.jpg">
-            <img src="https://i.urusai.cc/4HKjr.jpg">
-            <img src="https://i.urusai.cc/imSXD.jpg">
-            <img src="https://i.urusai.cc/UNNqu.jpg">
-            <img src="https://i.urusai.cc/OT2TB.jpg">
-            <img src="https://i.urusai.cc/dXnTy.jpg">
-            <img src="https://i.urusai.cc/D0jMW.jpg">
-            <img src="https://i.urusai.cc/2TKKy.jpg">
-        </div>
-
-        <!-- 尺寸與報告 -->
-        <div class="info-section">
-            <h3>尺寸表與試穿報告</h3>
-            <img src="https://i.urusai.cc/PtfVX.jpg">
-            <img src="https://i.urusai.cc/p9s8X.jpg">
-        </div>
-
-        <a href="https://line.me/ti/p/你的LINEID" class="btn">立即私訊下單</a>
-        
-        <div class="footer">
-            <p>IAD SHOP 客服時間：10:00 - 22:00</p>
-        </div>
+<div class="banner-carousel">
+  <div class="carousel-track">
+    <div class="carousel-slide">
+      <a href="#product-link">
+        <img src="你的URUSAI網址_在此" alt="BASIC CROPPED 完美版型修身上衣">
+      </a>
     </div>
-</body>
-</html>
+    
+    <div class="carousel-slide">
+      <a href="#product-link">
+        <img src="第二張主圖網址" alt="商品展示">
+      </a>
+    </div>
+  </div>
+
+  <button class="carousel-arrow prev">❮</button>
+  <button class="carousel-arrow next">❯</button>
+  
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+<style>
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* 限制最大寬度，維持高級服飾網站質感 */
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* 確保圖片縮放時完美貼合不變形 */
+}
+
+/* 左右箭頭高質感設計（半透明、滑過變深） */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* 下方小點點 */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: #000; /* 全黑代表當前圖片，很有極簡風 */
+  width: 20px; /* 條狀延伸，更現代感 */
+  border-radius: 4px;
+}
+</style>
