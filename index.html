@@ -9,19 +9,22 @@
         .container { max-width: 600px; margin: 0 auto; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
         .header { background: #000; color: #fff; text-align: center; padding: 20px; font-weight: 900; letter-spacing: 2px; }
         .banner { background: #ff4d4d; color: #fff; text-align: center; padding: 12px; font-weight: bold; }
-        
-        .section { padding: 20px; border-bottom: 1px solid #eee; }
+        .section { padding: 20px; border-bottom: 1px solid #eee; position: relative; }
         .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
         
-        /* 輪播圖樣式 */
-        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; scrollbar-width: none; }
+        /* 滑動容器與箭頭 */
+        .carousel-container { position: relative; }
+        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; scrollbar-width: none; }
         .carousel::-webkit-scrollbar { display: none; }
         .carousel img { flex: 0 0 100%; width: 100%; scroll-snap-align: start; border-radius: 8px; }
+        
+        .arrow { position: absolute; top: 40%; background: rgba(0,0,0,0.3); color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10; }
+        .arrow.prev { left: 10px; }
+        .arrow.next { right: 10px; }
 
-        /* 付款與表單樣式延續 */
+        /* 付款與表單樣式 */
         .payment-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
         .qr-code { width: 100%; max-width: 200px; display: block; margin: 10px auto; }
-        .highlight { color: #d00; font-weight: bold; }
         iframe { width: 100%; height: 1200px; border: none; }
     </style>
 </head>
@@ -33,19 +36,27 @@
 
     <div class="section">
         <div class="section-title">商品展示</div>
-        <div class="carousel">
-            <img src="https://i.urusai.cc/cs3Qp.jpg"><img src="https://i.urusai.cc/ZrdLl.jpg">
-            <img src="https://i.urusai.cc/4HKjr.jpg"><img src="https://i.urusai.cc/imSXD.jpg">
-            <img src="https://i.urusai.cc/UNNqu.jpg"><img src="https://i.urusai.cc/OT2TB.jpg">
-            <img src="https://i.urusai.cc/dXnTy.jpg"><img src="https://i.urusai.cc/D0jMW.jpg">
-            <img src="https://i.urusai.cc/2TKKy.jpg"><img src="https://i.urusai.cc/wpakn.jpg">
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('main', -1)">❮</button>
+            <div class="carousel" id="main">
+                <img src="https://i.urusai.cc/cs3Qp.jpg"><img src="https://i.urusai.cc/ZrdLl.jpg">
+                <img src="https://i.urusai.cc/4HKjr.jpg"><img src="https://i.urusai.cc/imSXD.jpg">
+                <img src="https://i.urusai.cc/UNNqu.jpg"><img src="https://i.urusai.cc/OT2TB.jpg">
+                <img src="https://i.urusai.cc/dXnTy.jpg"><img src="https://i.urusai.cc/D0jMW.jpg">
+                <img src="https://i.urusai.cc/2TKKy.jpg"><img src="https://i.urusai.cc/wpakn.jpg">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('main', 1)">❯</button>
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">尺寸表與試穿報告</div>
-        <div class="carousel">
-            <img src="https://i.urusai.cc/PtfVX.jpg"><img src="https://i.urusai.cc/p9s8X.jpg">
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('size', -1)">❮</button>
+            <div class="carousel" id="size">
+                <img src="https://i.urusai.cc/PtfVX.jpg"><img src="https://i.urusai.cc/p9s8X.jpg">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('size', 1)">❯</button>
         </div>
     </div>
 
@@ -70,6 +81,14 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjrOjrxJ5bxec29XuZos1mxfvb7HpsCCSinuYy1FD5vAp__Q/viewform?embedded=true">載入中…</iframe>
     </div>
 </div>
+
+<script>
+    function scrollSlide(id, direction) {
+        const container = document.getElementById(id);
+        const scrollAmount = container.clientWidth * direction;
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+</script>
 
 </body>
 </html>
