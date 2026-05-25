@@ -1,105 +1,73 @@
-<div class="banner-carousel">
-  <div class="carousel-track">
-    <div class="carousel-slide">
-      <a href="#product-link">
-        <img src="你的URUSAI網址_在此" alt="BASIC CROPPED 完美版型修身上衣">
-      </a>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAD SHOP | 官方訂購頁</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f8f8f8; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #fff; min-height: 100vh; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        .header { background-color: #000; color: #fff; text-align: center; padding: 20px; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
+        .banner { background-color: #ff4d4d; color: #fff; text-align: center; padding: 12px; font-weight: bold; font-size: 15px; }
+        
+        .section { padding: 25px 20px; border-bottom: 1px solid #eee; }
+        .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
+        
+        .product-images img { width: 100%; display: block; border-radius: 8px; margin-bottom: 10px; }
+        
+        /* 付款資訊樣式 */
+        .payment-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .payment-box h3 { margin-top: 0; font-size: 16px; color: #333; }
+        .qr-code { width: 100%; max-width: 200px; display: block; margin: 10px auto; border: 1px solid #eee; }
+        .info-text { font-size: 14px; color: #555; line-height: 1.8; }
+        .highlight { color: #d00; font-weight: bold; }
+
+        .order-form-section { padding: 20px; background-color: #fff; }
+        iframe { width: 100%; height: 1200px; border: none; }
+        .footer { text-align: center; padding: 30px; font-size: 12px; color: #999; background: #eee; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">IAD SHOP</div>
+    <div class="banner">🔥 慶祝官網上線：任選兩件享免運優惠 🔥</div>
+
+    <div class="section">
+        <div class="section-title">產品展示</div>
+        <div class="product-images">
+            <img src="請放入你的產品主圖網址" alt="商品展示">
+        </div>
+        <p class="info-text">版型極佳、純棉親膚，修身顯瘦不顯壯，是您衣櫃必備的基本款。</p>
     </div>
-    
-    <div class="carousel-slide">
-      <a href="#product-link">
-        <img src="第二張主圖網址" alt="商品展示">
-      </a>
+
+    <div class="section">
+        <div class="section-title">付款資訊</div>
+        <p class="info-text">付款後 4-9 個工作天送達。如遇特殊狀況，將依填寫資料進行退款。</p>
+
+        <div class="payment-box">
+            <h3>1. 轉帳匯款</h3>
+            <p class="info-text">
+                永豐銀行 (807)<br>
+                帳號：19201800126419<br>
+                戶名：網癮中年企業社<br>
+                <span class="highlight">※ 完成後請於訂單填寫帳號後 4 碼</span>
+            </p>
+        </div>
+
+        <div class="payment-box">
+            <h3>2. LINEPAY 付款</h3>
+            <img src="https://i.urusai.cc/It3DW.jpg" class="qr-code" alt="LinePay">
+            <p class="info-text">1. 掃描左方 QRCODE<br>2. 輸入付款金額<br>3. <span class="highlight">填寫訂單時請備註手機後 3 碼</span></p>
+        </div>
+
+        <div class="payment-box">
+            <h3>3. 信用卡付款</h3>
+            <img src="https://i.urusai.cc/Y8wor.jpg" class="qr-code" alt="信用卡付款">
+            <p class="info-text">1. 掃描左方 QRCODE<br>2. 輸入付款金額<br>3. <span class="highlight">填寫訂單時請填寫卡號後 4 碼</span></p>
+        </div>
     </div>
-  </div>
 
-  <button class="carousel-arrow prev">❮</button>
-  <button class="carousel-arrow next">❯</button>
-  
-  <div class="carousel-dots">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-  </div>
-</div>
-
-<style>
-.banner-carousel {
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* 限制最大寬度，維持高級服飾網站質感 */
-  margin: 0 auto;
-  overflow: hidden;
-  background-color: #f9f9f9;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  width: 100%;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover; /* 確保圖片縮放時完美貼合不變形 */
-}
-
-/* 左右箭頭高質感設計（半透明、滑過變深） */
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.carousel-arrow:hover {
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.prev { left: 15px; }
-.next { right: 15px; }
-
-/* 下方小點點 */
-.carousel-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 10;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.dot.active {
-  background: #000; /* 全黑代表當前圖片，很有極簡風 */
-  width: 20px; /* 條狀延伸，更現代感 */
-  border-radius: 4px;
-}
-</style>
+    <div class="order-form-section">
+        <h2 style="text-align:center;">📝 填寫訂單資訊</h2>
+        <iframe src="https
