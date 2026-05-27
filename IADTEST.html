@@ -31,32 +31,6 @@
         .arrow.prev { left: 10px; }
         .arrow.next { right: 10px; }
 
-        /* 新增：蝦皮好評連結按鈕樣式 */
-        .shopee-review-box {
-            background: #fff8f5;
-            border: 1px dashed #fe5722;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 5px 0;
-        }
-        .shopee-btn {
-            display: inline-block;
-            background-color: #ee4d2d;
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            font-weight: bold;
-            font-size: 15px;
-            border-radius: 25px;
-            margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(238, 77, 45, 0.2);
-            transition: background 0.2s;
-        }
-        .shopee-btn:hover {
-            background-color: #d73f21;
-        }
-
         /* 付款與表單樣式 */
         .payment-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
         .qr-code { width: 100%; max-width: 200px; display: block; margin: 10px auto; }
@@ -115,15 +89,16 @@
     </div>
 
     <div class="section">
-        <div class="section-title">熱銷評價見證</div>
-        <div class="shopee-review-box">
-            <p style="font-size: 14px; color: #555; margin: 0; line-height: 1.6;">
-                🔥 本商品在蝦皮原價已熱銷破百件！<br>
-                因蝦皮平台抽成較高且現貨常斷貨，VIP直購頁特開預購排單與免運優惠。
-            </p>
-            <a href="https://shopee.tw/-IAD-SHOP-%E5%AE%8C%E7%BE%8E%E7%89%88%E5%9E%8B!-%E7%BE%8E%E5%BC%8F-%E7%9F%AD%E7%89%88Tee-%E7%B4%94%E6%A3%89%E8%88%92%E9%81%A9-120g-%E8%88%92%E9%81%A9-BASIC-CROPPED-%E7%8F%BE%E8%B2%A8-%E8%B2%BC%E8%BA%AB-%E8%BE%A3%E5%A6%B9-i.419736247.40358367110#product_rating" target="_blank" class="shopee-btn">
-                🛍️ 點我前往蝦皮賣場查看五星好評
-            </a>
+        <div class="section-title">蝦皮破百熱銷・五星好評見證</div>
+        <p style="font-size: 14px; color: #ff4d4d; font-weight: bold; margin-top: -5px; margin-bottom: 15px;">🛍️ 蝦皮原價熱銷款！官網 VIP 獨家特開直購排單優惠</p>
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('reviews', -1)">❮</button>
+            <div class="carousel" id="reviews">
+                <img src="https://i.urusai.cc/cs3Qp.jpg">
+                <img src="https://i.urusai.cc/ZrdLl.jpg">
+                <img src="https://i.urusai.cc/4HKjr.jpg">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('reviews', 1)">❯</button>
         </div>
     </div>
 
@@ -148,44 +123,4 @@
         <div style="font-size: 16px; font-weight: bold; margin-top: 25px; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;">選擇付款方式</div>
 
         <div class="payment-box">
-            <h3>轉帳匯款 (完成後下方填寫帳號後4碼)</h3>
-            <p style="font-size: 14px; color: #555; line-height: 1.8;">
-                永豐銀行 代號807<br>
-                帳號：19201800126419<br>
-                戶名：網癮中年企業社<br>
-                1. 轉帳完成付款與填寫資料
-            </p>
-        </div>
-        <div class="payment-box">
-            <h3>LINEPAY付款 (完成後下方填寫手機後3碼)</h3>
-            <img src="https://i.urusai.cc/It3DW.jpg" class="qr-code">
-            <p style="font-size: 14px; color: #555; line-height: 1.8;">1. 掃描QRCODE<br>2. 輸入付款金額<br>3. 完成付款</p>
-        </div>
-        <div class="payment-box">
-            <h3>信用卡付款 (完成後下方填寫卡號後4碼)</h3>
-            <img src="https://i.urusai.cc/Y8wor.jpg" class="qr-code">
-            <p style="font-size: 14px; color: #555; line-height: 1.8;">1. 掃描QRCODE<br>2. 輸入付款金額<br>3. 完成付款與填寫資料</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2 style="text-align:center;">📝 填寫訂單資訊</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjrOjrxJ5bxec29XuZos1mxfvb7HpsCCSinuYy1FD5vAp__Q/viewform?embedded=true">載入中…</iframe>
-        
-        <div class="sms-notice-box">
-            訂單出貨將以簡訊通知<br>
-            也可加入官方LINE後傳送付款截圖(訊息通知)
-        </div>
-    </div>
-</div>
-
-<script>
-    function scrollSlide(id, direction) {
-        const container = document.getElementById(id);
-        const scrollAmount = container.clientWidth * direction;
-        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-</script>
-
-</body>
-</html>
+            <h3>轉帳匯款 (完成後下方填寫帳號後
