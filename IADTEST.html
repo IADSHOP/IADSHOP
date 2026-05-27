@@ -12,7 +12,7 @@
         .section { padding: 20px; border-bottom: 1px solid #eee; position: relative; }
         .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
         
-        /* 滑動容器與箭頭（完美比例、不拉伸變形） */
+        /* 滑動容器與箭頭 */
         .carousel-container { position: relative; width: 100%; overflow: hidden; }
         .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; scrollbar-width: none; }
         .carousel::-webkit-scrollbar { display: none; }
@@ -37,27 +37,22 @@
             border-radius: 6px;
         }
 
-        /* 調整：黑底紅框的蝦皮評價跳轉標籤樣式 */
+        /* 黑底紅框的蝦皮評價跳轉標籤樣式 */
         .shopee-review-link {
             display: block;
-            background-color: #000; /* 黑底 */
-            border: 2px solid #ff4d4d; /* 紅框 */
-            color: #fff; /* 白字 */
+            background-color: #000; 
+            border: 2px solid #ff4d4d; 
+            color: #fff; 
             text-align: center;
             padding: 12px 15px;
             font-size: 14px; 
             font-weight: bold; 
             letter-spacing: 1px;
-            margin-top: -5px; 
             margin-bottom: 15px;
             text-decoration: none;
             border-radius: 6px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.2s;
-        }
-        .shopee-review-link:hover {
-            background-color: #111;
-            border-color: #ff3333;
         }
         
         /* 按鈕垂直置中位置 */
@@ -112,18 +107,6 @@
     </div>
 
     <div class="section">
-        <div class="section-title">尺寸表與試穿報告</div>
-        <div class="carousel-container">
-            <button class="arrow prev" onclick="scrollSlide('size', -1)">❮</button>
-            <div class="carousel" id="size">
-                <img src="https://i.urusai.cc/PtfVX.jpg"><img src="https://i.urusai.cc/p9s8X.jpg">
-            </div>
-            <button class="arrow next" onclick="scrollSlide('size', 1)">❯</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">蝦皮破百熱銷・五星好評見證</div>
         <a href="https://s.shopee.tw/2VotE00YlR" target="_blank" class="shopee-review-link">
             🛍️ 蝦皮真實評價・點選可進入蝦皮頁面
         </a>
@@ -139,6 +122,17 @@
                 <img src="https://i.urusai.cc/cQIHe.jpg">
             </div>
             <button class="arrow next" onclick="scrollSlide('reviews', 1)">❯</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">尺寸表與試穿報告</div>
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('size', -1)">❮</button>
+            <div class="carousel" id="size">
+                <img src="https://i.urusai.cc/PtfVX.jpg"><img src="https://i.urusai.cc/p9s8X.jpg">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('size', 1)">❯</button>
         </div>
     </div>
 
@@ -200,11 +194,23 @@
 </div>
 
 <script>
+    // 基礎手動滑動功能
     function scrollSlide(id, direction) {
         const container = document.getElementById(id);
         const scrollAmount = container.clientWidth * direction;
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
+
+    // 評價區自動輪播 (3秒一次)
+    const reviewCarousel = document.getElementById('reviews');
+    setInterval(() => {
+        // 如果滑到最後一張，就跳回第一張，否則滑到下一張
+        if (reviewCarousel.scrollLeft + reviewCarousel.clientWidth >= reviewCarousel.scrollWidth - 10) {
+            reviewCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            reviewCarousel.scrollBy({ left: reviewCarousel.clientWidth, behavior: 'smooth' });
+        }
+    }, 3000);
 </script>
 
 </body>
