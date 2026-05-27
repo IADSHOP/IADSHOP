@@ -12,11 +12,12 @@
         .section { padding: 20px; border-bottom: 1px solid #eee; position: relative; }
         .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
         
-        /* 滑動容器與箭頭 */
+        /* 基礎滑動容器與箭頭 */
         .carousel-container { position: relative; width: 100%; overflow: hidden; }
         .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; scrollbar-width: none; }
         .carousel::-webkit-scrollbar { display: none; }
         
+        /* 主商品圖與尺寸圖：通用完美比例，不拉伸變形 */
         .carousel img { 
             flex: 0 0 100%; 
             width: 100%; 
@@ -26,7 +27,7 @@
             border-radius: 8px; 
         }
         
-        /* 好評截圖專用小橫條輪播樣式 */
+        /* 評價專用：小橫條輪播樣式（維持扁平，不影響尺寸圖） */
         .review-carousel img {
             flex: 0 0 100%;
             width: 100%;
@@ -130,7 +131,8 @@
         <div class="carousel-container">
             <button class="arrow prev" onclick="scrollSlide('size', -1)">❮</button>
             <div class="carousel" id="size">
-                <img src="https://i.urusai.cc/PtfVX.jpg"><img src="https://i.urusai.cc/p9s8X.jpg">
+                <img src="https://i.urusai.cc/PtfVX.jpg">
+                <img src="https://i.urusai.cc/p9s8X.jpg">
             </div>
             <button class="arrow next" onclick="scrollSlide('size', 1)">❯</button>
         </div>
@@ -201,14 +203,23 @@
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
 
-    // 評價區自動輪播 (3秒一次)
+    // 1. 評價區自動輪播 (3秒一次)
     const reviewCarousel = document.getElementById('reviews');
     setInterval(() => {
-        // 如果滑到最後一張，就跳回第一張，否則滑到下一張
         if (reviewCarousel.scrollLeft + reviewCarousel.clientWidth >= reviewCarousel.scrollWidth - 10) {
             reviewCarousel.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
             reviewCarousel.scrollBy({ left: reviewCarousel.clientWidth, behavior: 'smooth' });
+        }
+    }, 3000);
+
+    // 2. 尺寸表自動輪播 (3秒一次)
+    const sizeCarousel = document.getElementById('size');
+    setInterval(() => {
+        if (sizeCarousel.scrollLeft + sizeCarousel.clientWidth >= sizeCarousel.scrollWidth - 10) {
+            sizeCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            sizeCarousel.scrollBy({ left: sizeCarousel.clientWidth, behavior: 'smooth' });
         }
     }, 3000);
 </script>
