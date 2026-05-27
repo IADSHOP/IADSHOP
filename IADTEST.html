@@ -3,204 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP | 熟客限定回購特惠</title>
+    <title>IAD SHOP | 官方訂購頁</title>
     <style>
-        /* 基礎潮流風格設定 */
-        body {
-            font-family: "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        。container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #ffffff;
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-        }
-        /* 上半部：商品展示 */
-        。header {
-            background-color: #111;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-        。product-img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .product-info {
-            padding: 25px;
-        }
-        .product-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .price-tag {
-            color: #e63946;
-            font-size: 26px;
-            font-weight: bold;
-            margin: 15px 0;
-            padding: 10px;
-            background-color: #ffe3e5;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .features {
-            line-height: 1.8;
-            font-size: 16px;
+        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background-color: #f8f8f8; }
+        .container { max-width: 600px; margin: 0 auto; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        .header { background: #000; color: #fff; text-align: center; padding: 20px; font-weight: 900; letter-spacing: 2px; }
+        .banner { background: #ff4d4d; color: #fff; text-align: center; padding: 12px; font-weight: bold; }
+        .section { padding: 20px; border-bottom: 1px solid #eee; position: relative; }
+        .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
+        
+        /* 滑動容器與箭頭（完美比例、不拉伸變形） */
+        .carousel-container { position: relative; width: 100%; overflow: hidden; }
+        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; scrollbar-width: none; }
+        .carousel::-webkit-scrollbar { display: none; }
+        
+        .carousel img { 
+            flex: 0 0 100%; 
+            width: 100%; 
+            height: auto; 
+            object-fit: contain; 
+            scroll-snap-align: start; 
+            border-radius: 8px; 
         }
         
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 30px 0;
-        }
+        /* 按鈕垂直置中位置 */
+        .arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 12px 16px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10; }
+        .arrow.prev { left: 10px; }
+        .arrow.next { right: 10px; }
 
-        /* 下半部：匯款與金流區 */
-        .payment-section {
-            padding: 25px;
-            background-color: #fafafa;
-            border-top: 2px dashed #ddd;
-        }
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            border-left: 5px solid #111;
-            padding-left: 10px;
-            margin-bottom: 20px;
-        }
-        .bank-info {
-            background: #fff;
-            border: 1px solid #e0e0e0;
+        /* 新增：蝦皮好評連結按鈕樣式 */
+        .shopee-review-box {
+            background: #fff8f5;
+            border: 1px dashed #fe5722;
             padding: 15px;
             border-radius: 8px;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .bank-info p {
-            margin: 8px 0;
-        }
-        .qrcode-box {
             text-align: center;
-            margin: 20px 0;
+            margin: 5px 0;
         }
-        .qrcode-img {
-            width: 180px;
-            height: 180px;
-            border: 1px solid #ccc;
-            padding: 5px;
-            background: #fff;
+        .shopee-btn {
+            display: inline-block;
+            background-color: #ee4d2d;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 25px;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(238, 77, 45, 0.2);
+            transition: background 0.2s;
+        }
+        .shopee-btn:hover {
+            background-color: #d73f21;
         }
 
-        /* 最下方：回傳按鈕 */
-        .action-section {
-            padding: 25px;
-            text-align: center;
-        }
-        .btn {
-            display: block;
-            background-color: #28a745;
-            color: white;
-            padding: 15px;
-            font-size: 18px;
+        /* 付款與表單樣式 */
+        .payment-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .qr-code { width: 100%; max-width: 200px; display: block; margin: 10px auto; }
+        iframe { width: 100%; height: 1200px; border: none; }
+        
+        .notice-list { padding-left: 20px; margin: 10px 0; font-size: 14px; color: #555; line-height: 1.8; }
+        .price-list { list-style-type: none; padding-left: 0; margin: 10px 0; font-size: 14px; color: #333; line-height: 1.8; }
+        .highlight { color: #ff4d4d; font-weight: bold; }
+
+        /* 最下方新增的小框條樣式 */
+        .sms-notice-box { 
+            margin: 20px 0 10px 0; 
+            padding: 12px; 
+            background-color: #fff0f0; 
+            border: 1px solid #ffcccc; 
+            border-radius: 6px; 
+            font-size: 16px; 
+            color: #ff4d4d; 
             font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px;
-            margin-bottom: 15px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background-color: #218838;
-        }
-        .btn-line {
-            background-color: #06C755;
-        }
-        .btn-line:hover {
-            background-color: #05b04b;
-        }
-        .btn-ig {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        }
-        .notice {
-            font-size: 13px;
-            color: #666;
-            margin-top: 10px;
+            line-height: 1.6; 
+            text-align: center; 
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    
-    <!-- 店名標題 -->
-    <div class="header">IAD SHOP PREMIUM</div>
+    <div class="header">IAD SHOP</div>
+    <div class="banner">VIP專屬直購優惠價 2件$449免運</div>
 
-    <!-- 上半部：商品與價格 -->
-    <!-- 這裡的圖片網址可以換成客戶的商品圖 -->
-    <img class="product-img" src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600" alt="商品圖片">
-    
-    <div class="product-info">
-        <div class="product-title">【熟客回購限定】City Boy 街頭寬鬆硬挺工裝褲</div>
-        <p style="color:#666; margin:0;">感謝您在蝦皮的支持！原價 $680，包裹熟客回購享 75 折！</p>
-        
-        <div class="price-tag">回購私域價：$499 (全館滿千免運)</div>
-        
-        <div class="features">
-            <strong>🔥 商品三大必買特點：</strong>
-            <ul>
-                <li><strong>極致硬挺：</strong> 採用 100% 密織重磅純棉，挺度破表不貼腿。</li>
-                <li><strong>防潑水抗髒：</strong> 布料經微奈米防潑水處理，雨天出門也不怕。</li>
-                <li><strong>日系寬鬆版型：</strong> 上寬下窄微錐形修飾，任何身型都能輕鬆駕馭。</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- 下半部：金流結帳區 -->
-    <div class="payment-section">
-        <div class="section-title">💰 請選擇付款方式</div>
-        
-        <!-- 方式一：ATM匯款 -->
-        <div class="bank-info">
-            <strong style="color:#e63946;">【方式 A：ATM 銀行轉帳】</strong>
-            <p>銀行代碼：822 (中國信託)</p>
-            <p>銀行帳號：123-456789-012</p>
-            <p>商品金額 $499 + 運費 $60 = <strong>總匯款金額 $559</strong></p>
-        </div>
-
-        <!-- 方式二：線上刷卡 QR Code -->
-        <div class="bank-info">
-            <strong style="color:#007bff;">【方式 B：手機線上刷卡】</strong>
-            <p>請用手機截圖此 QR Code，或用另一台手機掃描即可線上刷卡付款。</p>
-            <div class="qrcode-box">
-                <!-- 這裡放客戶綠界或藍新的付款 QR Code 圖片 -->
-                <img class="qrcode-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iadshop.github.io" alt="刷卡QR Code範例">
-                <p style="font-size: 12px; color:#999; margin:5px 0 0 0;">（此為刷卡代收示意圖）</p>
+    <div class="section">
+        <div class="section-title">LINE客服ID:@006xovnz</div>
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('main', -1)">❮</button>
+            <div class="carousel" id="main">
+                <img src="https://i.urusai.cc/56wjh.jpg">
+                <img src="https://i.urusai.cc/cs3Qp.jpg"><img src="https://i.urusai.cc/ZrdLl.jpg">
+                <img src="https://i.urusai.cc/4HKjr.jpg"><img src="https://i.urusai.cc/imSXD.jpg">
+                <img src="https://i.urusai.cc/UNNqu.jpg"><img src="https://i.urusai.cc/OT2TB.jpg">
+                <img src="https://i.urusai.cc/dXnTy.jpg"><img src="https://i.urusai.cc/D0jMW.jpg">
+                <img src="https://i.urusai.cc/2TKKy.jpg"><img src="https://i.urusai.cc/wpakn.jpg">
             </div>
+            <button class="arrow next" onclick="scrollSlide('main', 1)">❯</button>
         </div>
     </div>
 
-    <!-- 最下方：付款完畢回傳通知 -->
-    <div class="action-section">
-        <div class="section-title" style="border-left-color: #28a745;">✅ 付款完成？請點擊回傳資料</div>
-        <p style="font-size: 14px; color:#555; margin-bottom: 20px;">請匯款或刷卡完成後，點擊下方按鈕告知我們「後五碼」與「收件地址」，我們將於24小時內為您安排出貨！</p>
-        
-        <!-- 這裡的 href 網址可以改成客戶的 LINE 或 IG 連結 -->
-        <a href="https://line.me" target="_blank" class="btn btn-line">💬 透過 LINE 官方帳號回傳</a>
-        <a href="https://instagram.com" target="_blank" class="btn btn-ig">📸 透過 IG 私訊回傳</a>
-        
-        <p class="notice">💡 貼心提醒：本官網由 IAD SHOP 熟客系統代管，交易安全有保障。</p>
+    <div class="section">
+        <div class="section-title">尺寸表與試穿報告</div>
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('size', -1)">❮</button>
+            <div class="carousel" id="size">
+                <img src="https://i.urusai.cc/PtfVX.jpg"><img src="https://i.urusai.cc/p9s8X.jpg">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('size', 1)">❯</button>
+        </div>
     </div>
 
+    <div class="section">
+        <div class="section-title">熱銷評價見證</div>
+        <div class="shopee-review-box">
+            <p style="font-size: 14px; color: #555; margin: 0; line-height: 1.6;">
+                🔥 本商品在蝦皮原價已熱銷破百件！<br>
+                因蝦皮平台抽成較高且現貨常斷貨，VIP直購頁特開預購排單與免運優惠。
+            </p>
+            <a href="https://shopee.tw/-IAD-SHOP-%E5%AE%8C%E7%BE%8E%E7%89%88%E5%9E%8B!-%E7%BE%8E%E5%BC%8F-%E7%9F%AD%E7%89%88Tee-%E7%B4%94%E6%A3%89%E8%88%92%E9%81%A9-120g-%E8%88%92%E9%81%A9-BASIC-CROPPED-%E7%8F%BE%E8%B2%A8-%E8%B2%BC%E8%BA%AB-%E8%BE%A3%E5%A6%B9-i.419736247.40358367110#product_rating" target="_blank" class="shopee-btn">
+                🛍️ 點我前往蝦皮賣場查看五星好評
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">購買須知</div>
+        <ul class="notice-list">
+            <li>付款後 4-9 個工作天送達。</li>
+            <li>如遇特殊不可抗狀況缺貨，將依填寫帳號退款。</li>
+            <li>若<strong>付款金額不正確</strong>，退款將收取 <span class="highlight">$15</span> 轉帳手續費。</li>
+            <li>退款工作時間為 3-7 個工作天。</li>
+            <li>訂單出貨將以簡訊通知。</li>
+            <li>也可加入官方LINE後傳送付款截圖(訊息通知)。</li>
+        </ul>
+
+        <div style="font-size: 15px; font-weight: bold; margin-top: 15px; margin-bottom: 5px;">VIP優惠價格：</div>
+        <ul class="price-list">
+            <li>1件：$269 + 運費 $60</li>
+            <li>2件：<span class="highlight">$449 (免運)</span></li>
+            <li>3件以上：單件 <span class="highlight">$225 (免運)</span></li>
+        </ul>
+        
+        <div style="font-size: 16px; font-weight: bold; margin-top: 25px; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;">選擇付款方式</div>
+
+        <div class="payment-box">
+            <h3>轉帳匯款 (完成後下方填寫帳號後4碼)</h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.8;">
+                永豐銀行 代號807<br>
+                帳號：19201800126419<br>
+                戶名：網癮中年企業社<br>
+                1. 轉帳完成付款與填寫資料
+            </p>
+        </div>
+        <div class="payment-box">
+            <h3>LINEPAY付款 (完成後下方填寫手機後3碼)</h3>
+            <img src="https://i.urusai.cc/It3DW.jpg" class="qr-code">
+            <p style="font-size: 14px; color: #555; line-height: 1.8;">1. 掃描QRCODE<br>2. 輸入付款金額<br>3. 完成付款</p>
+        </div>
+        <div class="payment-box">
+            <h3>信用卡付款 (完成後下方填寫卡號後4碼)</h3>
+            <img src="https://i.urusai.cc/Y8wor.jpg" class="qr-code">
+            <p style="font-size: 14px; color: #555; line-height: 1.8;">1. 掃描QRCODE<br>2. 輸入付款金額<br>3. 完成付款與填寫資料</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 style="text-align:center;">📝 填寫訂單資訊</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfjrOjrxJ5bxec29XuZos1mxfvb7HpsCCSinuYy1FD5vAp__Q/viewform?embedded=true">載入中…</iframe>
+        
+        <div class="sms-notice-box">
+            訂單出貨將以簡訊通知<br>
+            也可加入官方LINE後傳送付款截圖(訊息通知)
+        </div>
+    </div>
 </div>
+
+<script>
+    function scrollSlide(id, direction) {
+        const container = document.getElementById(id);
+        const scrollAmount = container.clientWidth * direction;
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+</script>
 
 </body>
 </html>
