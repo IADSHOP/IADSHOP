@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP｜私域引流架構</title>
+    <title>IAD SHOP｜暗黑科技引流架構</title>
     <style>
-        /* 1. 大背景色：冷霧灰藍漸層 */
+        /* 1. 大背景：高級深炭黑 */
         body { 
             margin: 0; 
-            background: linear-gradient(135deg, #CBD5E1 0%, #F2F4F5 50%, #E2E8F0 100%);
-            color: #1E293B; 
+            background-color: #1A1A1A; 
+            color: #FFFFFF; 
             font-family: '微軟正黑體', sans-serif; 
             height: 100vh; 
             display: flex; 
@@ -18,41 +18,34 @@
             overflow: hidden; 
         }
 
-        /* 2. 中間簡報卡片區：純白漂浮感 */
+        /* 2. 中間卡片：質感灰 + 死直角細線 */
         .slide { 
             display: none; 
             width: 85%; 
             max-width: 450px; 
             text-align: center; 
-            animation: fadeIn 0.5s ease; 
-            background: #FFFFFF;
-            padding: 40px 30px;
-            border-radius: 24px;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.8);
+            animation: fadeIn 0.4s ease; 
+            background: #262626;
+            padding: 50px 30px;
+            border: 1px solid #404040; /* 死直角細線 */
+            box-sizing: border-box;
         }
         
         .slide.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
-        /* 3. 文字色彩：深墨灰與板岩灰 */
-        h1 { font-size: 1.6rem; color: #1E293B; margin-bottom: 20px; font-weight: 700; }
-        p { color: #475569; line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem; }
-        .card { background: #F8FAFC; padding: 20px; border-radius: 12px; border: 1px solid #E2E8F0; text-align: left; margin: 15px 0; font-size: 0.9rem; color: #334155; }
+        /* 3. 文字色彩：極粗大標題與板岩灰內文 */
+        h1 { font-size: 1.8rem; color: #FFFFFF; margin-bottom: 25px; font-weight: 900; letter-spacing: -0.5px; }
+        p { color: #A3A3A3; line-height: 1.6; margin-bottom: 25px; font-size: 1rem; }
+        .card { background: #1A1A1A; padding: 20px; border: 1px solid #404040; text-align: left; margin: 20px 0; font-size: 0.9rem; color: #A3A3A3; }
         
-        /* 4. 科技商務藍按鈕 */
+        /* 4. 按鈕：純白底黑字，Hover 反轉 */
         .btn { 
-            background: #2563EB; 
-            color: #fff; 
-            padding: 16px 40px; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            cursor: pointer; 
-            display: inline-block; 
-            margin-top: 20px;
-            transition: 0.3s;
+            background: #FFFFFF; color: #000000; padding: 16px 40px; 
+            font-weight: 900; cursor: pointer; display: inline-block; margin-top: 20px;
+            transition: 0.3s; text-transform: uppercase; border: none;
         }
-        .btn:hover { background: #1D4ED8; }
+        .btn:hover { background: #000000; color: #FFFFFF; border: 1px solid #FFFFFF; }
     </style>
 </head>
 <body>
@@ -64,13 +57,79 @@
 </div>
 
 <div class="slide">
-    <h1>適合對象</h1>
+    <h1>誰適合這套系統？</h1>
     <div class="card">
         ✅ 蝦皮電商新手 / 中手 / 老手<br>
         ✅ 有明星商品、想變現的自媒體<br>
         ❌ 不適合：大品牌與高流量賣家
     </div>
     <div class="btn" onclick="next(2)">戳痛點</div>
+</div>
+
+<div class="slide">
+    <h1>賣家三大絕望痛點</h1>
+    <div class="card">
+        1. 利潤壓縮（調低沒錢賺，調高沒人買）<br>
+        2. 廣告費燒不停（競爭太激烈）<br>
+        3. 金流週轉期（錢都在平台手上）
+    </div>
+    <div class="btn" onclick="next(3)">看懂真相</div>
+</div>
+
+<div class="slide">
+    <h1>平台撥款「環狀週轉」</h1>
+    <p>進貨 → 賣出 → 出貨 → 取貨 → 鑑賞期 → 撥款<br><br>單量越大，戶頭越空。</p>
+    <div class="btn" onclick="next(4)">看如何逆轉</div>
+</div>
+
+<div class="slide">
+    <h1>我們的系統優勢</h1>
+    <p>簡單、快速、便宜。<br>免年費、免月租、免抽成。<br>買斷後全部是你的。</p>
+    <div class="btn" onclick="next(5)">借力引流</div>
+</div>
+
+<div class="slide">
+    <h1>借力打力：一秒轉私域</h1>
+    <p>不需要拋棄蝦皮，我們只是讓你的客戶，直接進到你自己的口袋。</p>
+    <div class="btn" onclick="next(6)">無壓力金流</div>
+</div>
+
+<div class="slide">
+    <h1>我們的逆轉環狀圖</h1>
+    <p>買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br><br>「收到錢再訂貨」才是生存之道。</p>
+    <div class="btn" onclick="next(7)">關於我：小傑</div>
+</div>
+
+<div class="slide">
+    <h1>我的電商故事</h1>
+    <p>2017踏入自媒體，深知功能炫砲沒用。<br>簡單、快速、便宜，才是你的救命稻草。</p>
+    <div class="btn" onclick="next(8)">保固與維護</div>
+</div>
+
+<div class="slide">
+    <h1>一年保固・售後保障</h1>
+    <div class="card">
+        • 穩定重啟：7日內修復<br>
+        • 365天技術諮詢<br>
+        • 三次免費連結更新
+    </div>
+    <div class="btn" onclick="next(9)">選擇方案</div>
+</div>
+
+<div class="slide">
+    <h1>選擇你的啟動方案</h1>
+    <div class="card">
+        A 基礎展示 $980<br>B 系統成交 $1,780<br>C 系列經營 $3,880<br>D 旗艦店鋪 $4,880<br>E 品牌官網 $5,980
+    </div>
+    <div class="btn" onclick="next(10)">確認付款</div>
+</div>
+
+<div class="slide">
+    <h1>付款與開通資料</h1>
+    <p style="font-size:0.9rem;">永豐銀行(807) 19201800126419<br>網癮中年企業社</p>
+    <img src="https://i.urusai.cc/It3DW.jpg" style="width:80px; margin:0 5px;">
+    <img src="https://i.urusai.cc/Y8wor.jpg" style="width:80px; margin:0 5px;">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true" style="width:100%; height:250px; border:none; border-radius:0px; margin-top:20px;"></iframe>
 </div>
 
 <script>
