@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAD SHOP｜私域引流架構</title>
     <style>
-        /* 背景處理：極簡黑，兩側帶有一點點客萊因藍的渲染 */
+        /* 背景：客萊因藍光暈 + 純黑底 */
         body { 
             margin: 0; 
             background: #000;
-            /* 在背景左右兩側隱約加入藍色光暈，中心保持純黑 */
             background-image: 
-                radial-gradient(circle at 0% 50%, rgba(0, 47, 167, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 100% 50%, rgba(0, 47, 167, 0.15) 0%, transparent 50%);
+                radial-gradient(circle at 0% 50%, rgba(0, 70, 255, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 100% 50%, rgba(0, 70, 255, 0.25) 0%, transparent 50%);
             color: #ffffff; 
             font-family: '微軟正黑體', sans-serif; 
             height: 100vh; 
@@ -22,7 +21,7 @@
             overflow: hidden; 
         }
 
-        /* 視窗：經典黑綠配色 */
+        /* 視窗：白邊框，白色文字 */
         .slide { 
             display: none; 
             width: 85%; 
@@ -32,23 +31,23 @@
             background: #0a0a0a;
             padding: 40px 25px;
             border-radius: 15px;
-            border: 1px solid #222;
+            border: 1px solid #333;
         }
         
         .slide.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
-        /* 黑綠配色 */
-        h1 { font-size: 1.5rem; color: #deff9a; margin-bottom: 20px; }
-        p { color: #ccc; line-height: 1.6; margin-bottom: 20px; }
-        .card { background: #151515; padding: 15px; border-radius: 8px; border: 1px solid #333; text-align: left; margin: 15px 0; font-size: 0.9rem; }
+        /* 全白色系 UI */
+        h1 { font-size: 1.6rem; color: #fff; margin-bottom: 20px; }
+        p { color: #bbb; line-height: 1.6; margin-bottom: 20px; }
+        .card { background: #151515; padding: 15px; border-radius: 8px; border: 1px solid #444; text-align: left; margin: 15px 0; font-size: 0.9rem; color: #eee; }
         
         .btn { 
-            background: #deff9a; color: #000; padding: 14px 35px; border-radius: 4px; 
+            background: #fff; color: #000; padding: 14px 35px; border-radius: 4px; 
             font-weight: bold; cursor: pointer; display: inline-block; margin-top: 20px;
             transition: 0.2s;
         }
-        .btn:hover { background: #c5e680; }
+        .btn:hover { background: #ddd; }
     </style>
 </head>
 <body>
@@ -81,7 +80,7 @@
 
 <div class="slide">
     <h1>平台撥款「環狀週轉」</h1>
-    <p style="color:#deff9a;">進貨 → 賣出 → 出貨 → 取貨 → 鑑賞期 → 撥款<br><br>單量越大，戶頭越空。</p>
+    <p style="color:#fff;">進貨 → 賣出 → 出貨 → 取貨 → 鑑賞期 → 撥款<br><br>單量越大，戶頭越空。</p>
     <div class="btn" onclick="next(4)">看如何逆轉</div>
 </div>
 
@@ -99,7 +98,7 @@
 
 <div class="slide">
     <h1>我們的逆轉環狀圖</h1>
-    <p style="color:#deff9a;">買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br><br>「收到錢再訂貨」才是生存之道。</p>
+    <p style="color:#fff;">買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br><br>「收到錢再訂貨」才是生存之道。</p>
     <div class="btn" onclick="next(7)">關於我：小傑</div>
 </div>
 
