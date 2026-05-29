@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAD SHOP｜私域引流架構</title>
     <style>
-        /* 回歸極簡深黑 */
+        /* 背景處理：極簡黑，兩側帶有一點點客萊因藍的渲染 */
         body { 
             margin: 0; 
-            background-color: #000000; 
+            background: #000;
+            /* 在背景左右兩側隱約加入藍色光暈，中心保持純黑 */
+            background-image: 
+                radial-gradient(circle at 0% 50%, rgba(0, 47, 167, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 50%, rgba(0, 47, 167, 0.15) 0%, transparent 50%);
             color: #ffffff; 
             font-family: '微軟正黑體', sans-serif; 
             height: 100vh; 
@@ -18,33 +22,33 @@
             overflow: hidden; 
         }
 
-        /* 中間區塊：高級畫廊感 */
+        /* 視窗：經典黑綠配色 */
         .slide { 
             display: none; 
             width: 85%; 
             max-width: 450px; 
             text-align: center; 
             animation: fadeIn 0.4s ease; 
-            background: #0d0d0d;
-            padding: 50px 30px;
-            border-radius: 20px;
-            border: 1px solid #222; /* 極細邊框，增加質感 */
-            box-shadow: 0 0 40px rgba(255,255,255,0.03); /* 極微弱的陰影，讓區塊浮起來 */
+            background: #0a0a0a;
+            padding: 40px 25px;
+            border-radius: 15px;
+            border: 1px solid #222;
         }
         
         .slide.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
-        h1 { font-size: 1.6rem; color: #fff; margin-bottom: 25px; letter-spacing: 1px; }
-        p { color: #888; line-height: 1.7; margin-bottom: 30px; font-size: 0.95rem; }
-        .card { background: #161616; padding: 20px; border-radius: 12px; border: 1px solid #222; text-align: left; margin: 20px 0; font-size: 0.9rem; color: #bbb; }
+        /* 黑綠配色 */
+        h1 { font-size: 1.5rem; color: #deff9a; margin-bottom: 20px; }
+        p { color: #ccc; line-height: 1.6; margin-bottom: 20px; }
+        .card { background: #151515; padding: 15px; border-radius: 8px; border: 1px solid #333; text-align: left; margin: 15px 0; font-size: 0.9rem; }
         
         .btn { 
-            background: #fff; color: #000; padding: 14px 40px; border-radius: 5px; 
+            background: #deff9a; color: #000; padding: 14px 35px; border-radius: 4px; 
             font-weight: bold; cursor: pointer; display: inline-block; margin-top: 20px;
             transition: 0.2s;
         }
-        .btn:hover { background: #eee; }
+        .btn:hover { background: #c5e680; }
     </style>
 </head>
 <body>
@@ -58,9 +62,9 @@
 <div class="slide">
     <h1>適合對象</h1>
     <div class="card">
-        • 蝦皮電商新手 / 中手 / 老手<br>
-        • 有明星商品、想變現的自媒體<br>
-        • 不適合：大品牌與高流量賣家
+        ✅ 蝦皮電商新手 / 中手 / 老手<br>
+        ✅ 有明星商品、想變現的自媒體<br>
+        ❌ 不適合：大品牌與高流量賣家
     </div>
     <div class="btn" onclick="next(2)">戳痛點</div>
 </div>
@@ -77,7 +81,7 @@
 
 <div class="slide">
     <h1>平台撥款「環狀週轉」</h1>
-    <p>進貨 → 賣出 → 出貨 → 取貨 → 鑑賞期 → 撥款<br>單量越大，戶頭越空。</p>
+    <p style="color:#deff9a;">進貨 → 賣出 → 出貨 → 取貨 → 鑑賞期 → 撥款<br><br>單量越大，戶頭越空。</p>
     <div class="btn" onclick="next(4)">看如何逆轉</div>
 </div>
 
@@ -88,14 +92,14 @@
 </div>
 
 <div class="slide">
-    <h1>借力打力</h1>
+    <h1>借力打力：一秒轉私域</h1>
     <p>不需要拋棄蝦皮，我們只是讓你的客戶，直接進到你自己的口袋。</p>
     <div class="btn" onclick="next(6)">無壓力金流</div>
 </div>
 
 <div class="slide">
     <h1>我們的逆轉環狀圖</h1>
-    <p>買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br>「收到錢再訂貨」才是生存之道。</p>
+    <p style="color:#deff9a;">買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br><br>「收到錢再訂貨」才是生存之道。</p>
     <div class="btn" onclick="next(7)">關於我：小傑</div>
 </div>
 
@@ -129,7 +133,6 @@
     <img src="https://i.urusai.cc/It3DW.jpg" style="width:80px; margin:0 10px;">
     <img src="https://i.urusai.cc/Y8wor.jpg" style="width:80px; margin:0 10px;">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true" style="width:100%; height:250px; border:none; border-radius:5px; margin-top:20px;"></iframe>
-    <div style="font-size: 0.7rem; color: #555; margin-top: 10px;">下單視為同意服務協議。</div>
 </div>
 
 <script>
