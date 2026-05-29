@@ -5,46 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAD SHOP 私域引流架構</title>
     <style>
-        body { font-family: '微軟正黑體', sans-serif; background: #000; color: #fff; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
-        .slide { display: none; width: 90%; max-width: 500px; text-align: center; animation: fadeIn 0.5s; }
+        body { margin: 0; background-color: #121212; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+        .slide { display: none; width: 85%; max-width: 450px; text-align: center; animation: fadeIn 0.6s ease; }
         .slide.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        button { background: #fff; color: #000; border: none; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 30px; }
-        h1 { font-size: 1.8rem; margin-bottom: 20px; }
-        .qr-img { width: 150px; display: block; margin: 20px auto; }
-        iframe { width: 100%; height: 500px; border: none; border-radius: 10px; background: #fff; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        h1 { font-size: 1.8rem; line-height: 1.4; margin-bottom: 20px; color: #fff; }
+        p { font-size: 1.1rem; color: #b0b0b0; margin-bottom: 30px; }
+        
+        .btn { background: #ffffff; color: #000; padding: 15px 40px; border-radius: 50px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .btn:hover { background: #e0e0e0; transform: scale(1.05); }
+        
+        .card { background: #1e1e1e; padding: 25px; border-radius: 20px; text-align: left; margin-bottom: 20px; border: 1px solid #333; }
+        .price { font-size: 1.5rem; font-weight: bold; color: #fff; }
+        
+        iframe { width: 100%; height: 60vh; border: none; border-radius: 15px; background: #fff; }
+        .qr-area { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
+        .qr-area img { width: 45%; border-radius: 10px; }
     </style>
 </head>
 <body>
 
-<!-- 頁面 1：痛點 -->
+<!-- Slide 1 -->
 <div class="slide active">
     <h1>蝦皮賣得要死要活，扣掉 15% 抽成還剩多少？</h1>
-    <p>離開蝦皮斷流量，留在蝦皮養平台。</p>
-    <button onclick="next(1)">點擊查看解決方案</button>
+    <p>經營電商，不該是為了幫平台打工。</p>
+    <div class="btn" onclick="next(1)">查看我的引流秘密</div>
 </div>
 
-<!-- 頁面 2：故事 -->
+<!-- Slide 2 -->
 <div class="slide">
-    <h1>我的五年電商心法</h1>
-    <p>「這不只是系統，這是把你被抽走的利潤，重新拿回來的『引流架構』。」</p>
-    <button onclick="next(2)">查看方案細節</button>
+    <h1>從「養平台」到「留住客戶」</h1>
+    <p>五年電商經驗，我發現：離開蝦皮斷流量，留在蝦皮養平台。我設計了這套私域架構，把毛利留在你口袋。</p>
+    <div class="btn" onclick="next(2)">查看方案細節</div>
 </div>
 
-<!-- 頁面 3：方案 -->
+<!-- Slide 3 -->
 <div class="slide">
     <h2>選擇您的啟動方案</h2>
-    <div style="text-align:left; font-size: 0.9rem;">
-        <p>A：基礎展示 $980<br>B：系統成交 $1,780<br>C：系列經營 $3,880 (推薦)<br>D：旗艦店鋪 $4,880<br>E：品牌官網 $5,980</p>
+    <div class="card">
+        <div>系列經營版 (推薦)</div>
+        <div class="price">$3,880</div>
+        <small style="color:#888;">含自動對帳、3個商品頁、精準導流</small>
     </div>
-    <button onclick="next(3)">進入收款與開通</button>
+    <div class="btn" onclick="next(3)">立即啟動服務</div>
 </div>
 
-<!-- 頁面 4：收款與表單 -->
+<!-- Slide 4 -->
 <div class="slide">
-    <h2>最後一步：啟動服務</h2>
-    <p>永豐 807 | 19201800126419</p>
-    <img src="https://i.urusai.cc/It3DW.jpg" class="qr-img">
+    <h2>付款與確認</h2>
+    <p>永豐銀行 807 | 19201800126419</p>
+    <div class="qr-area">
+        <img src="https://i.urusai.cc/It3DW.jpg">
+        <img src="https://i.urusai.cc/Y8wor.jpg">
+    </div>
+    <div style="margin-top:20px;" class="btn" onclick="next(4)">完成匯款，填寫資料</div>
+</div>
+
+<!-- Slide 5 -->
+<div class="slide">
+    <h2>最後資料填寫</h2>
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true"></iframe>
 </div>
 
