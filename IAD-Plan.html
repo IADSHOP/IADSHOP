@@ -3,69 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP 私域引流架構</title>
+    <title>IAD SHOP 私域引流服務</title>
     <style>
-        body { margin: 0; background-color: #121212; color: #ffffff; font-family: 'Helvetica Neue', Arial, sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+        body { margin: 0; background-color: #121212; color: #ffffff; font-family: 'Helvetica Neue', sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
         .slide { display: none; width: 85%; max-width: 450px; text-align: center; animation: fadeIn 0.6s ease; }
         .slide.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
-        h1 { font-size: 1.8rem; line-height: 1.4; margin-bottom: 20px; color: #fff; }
-        p { font-size: 1.1rem; color: #b0b0b0; margin-bottom: 30px; }
+        h1 { font-size: 1.6rem; color: #fff; margin-bottom: 20px; }
+        p { color: #b0b0b0; line-height: 1.6; margin-bottom: 30px; }
+        .btn { background: #fff; color: #000; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; display: inline-block; }
         
-        .btn { background: #ffffff; color: #000; padding: 15px 40px; border-radius: 50px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .btn:hover { background: #e0e0e0; transform: scale(1.05); }
-        
-        .card { background: #1e1e1e; padding: 25px; border-radius: 20px; text-align: left; margin-bottom: 20px; border: 1px solid #333; }
-        .price { font-size: 1.5rem; font-weight: bold; color: #fff; }
-        
-        iframe { width: 100%; height: 60vh; border: none; border-radius: 15px; background: #fff; }
-        .qr-area { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
-        .qr-area img { width: 45%; border-radius: 10px; }
+        /* 區塊樣式 */
+        .card { background: #1e1e1e; padding: 20px; border-radius: 15px; border: 1px solid #333; margin-bottom: 20px; text-align: left; }
     </style>
 </head>
 <body>
 
-<!-- Slide 1 -->
 <div class="slide active">
-    <h1>蝦皮賣得要死要活，扣掉 15% 抽成還剩多少？</h1>
-    <p>經營電商，不該是為了幫平台打工。</p>
-    <div class="btn" onclick="next(1)">查看我的引流秘密</div>
+    <h1>蝦皮賣得要死要活，扣掉 15% 抽成還剩多少？ [cite: 1]</h1>
+    <p>經營電商，不該是為了幫平台打工。 [cite: 2]</p>
+    <div class="btn" onclick="next(1)">查看我的故事</div>
 </div>
 
-<!-- Slide 2 -->
 <div class="slide">
-    <h1>從「養平台」到「留住客戶」</h1>
-    <p>五年電商經驗，我發現：離開蝦皮斷流量，留在蝦皮養平台。我設計了這套私域架構，把毛利留在你口袋。</p>
-    <div class="btn" onclick="next(2)">查看方案細節</div>
+    <h1>電商戰友的真心話 [cite: 3]</h1>
+    <p>離開蝦皮等於斷流，留在蝦皮等於養平台。 [cite: 5] 我開發了這套引流架構，讓你把毛利留在口袋。 [cite: 2, 7]</p>
+    <div class="btn" onclick="next(2)">查看系統展示</div>
 </div>
 
-<!-- Slide 3 -->
 <div class="slide">
-    <h2>選擇您的啟動方案</h2>
+    <h1>系統實際運作效果</h1>
+    <div class="card" style="height: 150px; display: flex; align-items: center; justify-content: center; border: 2px dashed #444;">
+        (此處將放置您的影片或截圖)
+    </div>
+    <div class="btn" onclick="next(3)">查看服務細節</div>
+</div>
+
+<div class="slide">
+    <h1>一年保固・售後保障 </h1>
     <div class="card">
-        <div>系列經營版 (推薦)</div>
-        <div class="price">$3,880</div>
-        <small style="color:#888;">含自動對帳、3個商品頁、精準導流</small>
+        • 穩定重啟：7個工作日內修復 [cite: 13, 14]<br>
+        • 365天技術諮詢 [cite: 15]<br>
+        • 三次免費連結更新 [cite: 17, 18]
     </div>
-    <div class="btn" onclick="next(3)">立即啟動服務</div>
+    <div class="btn" onclick="next(4)">選擇方案</div>
 </div>
 
-<!-- Slide 4 -->
 <div class="slide">
-    <h2>付款與確認</h2>
-    <p>永豐銀行 807 | 19201800126419</p>
-    <div class="qr-area">
-        <img src="https://i.urusai.cc/It3DW.jpg">
-        <img src="https://i.urusai.cc/Y8wor.jpg">
+    <h1>客製化方案一覽 [cite: 10]</h1>
+    <div class="card">
+        A: 基礎展示版 $980 [cite: 11]<br>
+        B: 系統成交版 $1,780 [cite: 11]<br>
+        C: 系列經營版 $3,880 [cite: 11]
     </div>
-    <div style="margin-top:20px;" class="btn" onclick="next(4)">完成匯款，填寫資料</div>
+    <div class="btn" onclick="next(5)">選擇付款</div>
 </div>
 
-<!-- Slide 5 -->
 <div class="slide">
-    <h2>最後資料填寫</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true"></iframe>
+    <h1>銀行匯款資訊 [cite: 19]</h1>
+    <p>永豐銀行 (807) <br> 19201800126419 [cite: 23]</p>
+    <div class="btn" onclick="next(6)">下一步</div>
+</div>
+
+<div class="slide">
+    <h1>掃碼支付 [cite: 26]</h1>
+    <img src="https://i.urusai.cc/It3DW.jpg" style="width:120px;">
+    <img src="https://i.urusai.cc/Y8wor.jpg" style="width:120px;">
+    <div class="btn" onclick="next(7)">前往填寫資料</div>
+</div>
+
+<div class="slide">
+    <h1>提交開通申請 [cite: 33]</h1>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true" style="width:100%; height:300px; border:none; border-radius:10px;"></iframe>
+    <div class="btn" onclick="next(8)">查看協議</div>
+</div>
+
+<div class="slide">
+    <h1>服務協議 [cite: 34]</h1>
+    <p style="font-size: 0.8rem;">下單即視為同意協議，數位產品恕不退款。 [cite: 35]</p>
+    <div class="btn" onclick="location.href='https://line.me/ti/p/@IADSHOP'">聯絡小傑戰友 [cite: 36, 39]</div>
 </div>
 
 <script>
@@ -74,6 +91,5 @@
         document.querySelectorAll('.slide')[n].classList.add('active');
     }
 </script>
-
 </body>
 </html>
