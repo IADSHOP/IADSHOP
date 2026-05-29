@@ -3,42 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP 私域引流服務</title>
+    <title>IAD SHOP｜私域引流架構</title>
     <style>
-        body { margin: 0; background-color: #121212; color: #fff; font-family: '微軟正黑體', sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
-        .slide { display: none; width: 90%; max-width: 500px; text-align: center; animation: fadeIn 0.5s; }
+        body { margin: 0; background-color: #0a0a0a; color: #fff; font-family: '微軟正黑體', sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
+        .slide { display: none; width: 90%; max-width: 500px; text-align: center; animation: fadeIn 0.5s ease; }
         .slide.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
-        /* 手機排版關鍵：圖片上方，文字下方 */
-        .content-box { display: flex; flex-direction: column; gap: 20px; }
-        .image-placeholder { width: 100%; height: 200px; background: #333; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #888; }
-        
-        h1 { font-size: 1.5rem; margin: 10px 0; }
-        .btn { background: #fff; color: #000; padding: 12px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 20px; }
+        h1 { font-size: 1.6rem; color: #deff9a; margin-bottom: 20px; }
+        h2 { font-size: 1.2rem; color: #fff; margin-bottom: 20px; }
+        p { color: #ccc; line-height: 1.6; margin-bottom: 20px; }
+        .card { background: #1a1a1a; padding: 20px; border-radius: 12px; border: 1px solid #333; text-align: left; margin: 15px 0; }
+        .btn { background: #deff9a; color: #000; padding: 15px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
 
 <div class="slide active">
-    <div class="content-box">
-        <div class="image-placeholder">放置您的電商情境圖片</div>
-        <div>
-            <h1>蝦皮賣得要死要活</h1>
-            <p>扣掉 15% 抽成還剩多少？ [cite: 1]</p>
-        </div>
-    </div>
-    <div class="btn" onclick="next(1)">下一步</div>
+    <h1>蝦皮賣得越好，你反而越窮？</h1>
+    <p>15% 抽成 + 金流周轉 + 廣告成本 = 你的利潤全被平台吞了。</p>
+    <div class="btn" onclick="next(1)">小電商人的私域術</div>
 </div>
 
 <div class="slide">
-    <div class="content-box">
-        <div class="image-placeholder">放置您的服務示意圖</div>
-        <div>
-            <h1>電商戰友的真心話</h1>
-            <p>離開蝦皮斷流量，留在蝦皮養平台 [cite: 5]。我開發了這套引流架構，把毛利留在口袋 [cite: 2]。</p>
-        </div>
+    <h1>這是為你設計的嗎？</h1>
+    <div class="card">
+        ✅ 蝦皮電商新手/中手/老手<br>
+        ✅ 有明星商品、想變現的自媒體<br>
+        ❌ 不適合：大品牌與極高流量賣家
     </div>
-    <div class="btn" onclick="next(2)">查看方案</div>
+    <div class="btn" onclick="next(2)">戳痛點，看真相</div>
+</div>
+
+<div class="slide">
+    <h1>賣家三大絕望痛點</h1>
+    <div class="card">
+        1. 利潤被壓縮（調低沒利潤，調高沒流量）<br>
+        2. 廣告費燒不停（競爭太激烈）<br>
+        3. 金流週轉期（錢都在平台手上）
+    </div>
+    <div class="btn" onclick="next(3)">看懂「被壓榨」過程</div>
+</div>
+
+<div class="slide">
+    <h1>平台撥款「環狀週轉」</h1>
+    <p style="font-size: 0.8rem; background: #222; padding:10px;">花錢進貨(1)→賣出(5)→出貨(6)→取貨(13)→撥款(20+天)</p>
+    <p style="color:#ff6b6b;">這就是為什麼你單量越大，戶頭越空的原因。</p>
+    <div class="btn" onclick="next(4)">看我們如何逆轉</div>
+</div>
+
+<div class="slide">
+    <h1>我們的系統優勢</h1>
+    <p>簡單、快速、便宜。免年費、免月租、免抽成，買斷後全部是你的。</p>
+    <div class="btn" onclick="next(5)">借力蝦皮引流</div>
+</div>
+
+<div class="slide">
+    <h1>借力打力：一秒轉入私域</h1>
+    <p>不需要拋棄蝦皮，我們只是讓你的客戶，直接進到你自己的口袋。</p>
+    <div class="btn" onclick="next(6)">無壓力金流圖解</div>
+</div>
+
+<div class="slide">
+    <h1>我們的逆轉環狀圖</h1>
+    <p style="font-size: 0.8rem; background: #222; padding:10px;">買家下單(1) → 收款(1) → 花錢進貨(1) → 出貨(4) → 取貨(7)</p>
+    <p style="color:#deff9a;">收到錢再訂貨，這才是電商該有的樣子。</p>
+    <div class="btn" onclick="next(7)">關於我：小傑</div>
+</div>
+
+<div class="slide">
+    <h1>我的故事</h1>
+    <p>2017踏入自媒體，深知功能炫砲沒用，重點是「簡單、快速、便宜」。我不是客服，我是你的電商戰友。</p>
+    <div class="btn" onclick="next(8)">保固與維護</div>
+</div>
+
+<div class="slide">
+    <h1>一年保固・售後維護</h1>
+    <div class="card">
+        • 穩定重啟：7日內修復<br>
+        • 365天全天候諮詢<br>
+        • 三次免費連結更新
+    </div>
+    <div class="btn" onclick="next(9)">選擇你的方案</div>
+</div>
+
+<div class="slide">
+    <h1>選擇啟動方案</h1>
+    <div class="card">
+        A 基礎展示 $980<br>B 系統成交 $1,780<br>C 系列經營 $3,880<br>D 旗艦店鋪 $4,880<br>E 品牌官網 $5,980
+    </div>
+    <div class="btn" onclick="next(10)">確認付款</div>
+</div>
+
+<div class="slide">
+    <h1>付款資訊</h1>
+    <p>永豐銀行(807)<br>19201800126419<br>網癮中年企業社</p>
+    <img src="https://i.urusai.cc/It3DW.jpg" style="width:100px;">
+    <img src="https://i.urusai.cc/Y8wor.jpg" style="width:100px;">
+    <div class="btn" onclick="next(11)">填寫開通資料</div>
+</div>
+
+<div class="slide">
+    <h1>資料填寫</h1>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true" style="width:100%; height:400px; border:none; border-radius:10px;"></iframe>
 </div>
 
 <script>
