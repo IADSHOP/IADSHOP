@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAD SHOP｜工業冷淡敘事架構</title>
     <style>
-        /* 背景：冷灰漸層 */
+        /* 1. 大背景：縱向漸層 */
         body { 
             margin: 0; 
             background: linear-gradient(180deg, #555555 0%, #3A3A3A 100%);
@@ -19,13 +19,15 @@
             position: relative;
         }
 
-        /* 兩側輔助線：加粗並往中間靠 (left/right 由 5% 改為 15%) */
-        body::before, body::after {
-            content: ''; position: absolute; top: 0; bottom: 0; width: 2px;
-            background: rgba(255,255,255,0.2);
+        /* 2. 電腦版專屬：兩側輔助線 */
+        @media (min-width: 768px) {
+            body::before, body::after {
+                content: ''; position: absolute; top: 0; bottom: 0; width: 2px;
+                background: rgba(255,255,255,0.2);
+            }
+            body::before { left: 25%; } /* 再往內靠，避免擋到手機版寬度 */
+            body::after { right: 25%; }
         }
-        body::before { left: 15%; }
-        body::after { right: 15%; }
 
         /* 頂部進度條 */
         #progress-bar {
@@ -33,11 +35,12 @@
             background: #FFFFFF; transition: width 0.4s ease;
         }
 
-        /* 文字細節：調整大小與間距 */
+        /* 文字細節 */
         .corner-mark { position: absolute; color: rgba(255,255,255,0.5); letter-spacing: 3px; font-weight: bold; }
         .top-left { top: 30px; left: 30px; font-size: 14px; }
         .bottom-right { bottom: 30px; right: 30px; font-size: 18px; }
 
+        /* 中間卡片：維持原本的工業風設定 */
         .slide { 
             display: none; width: 85%; max-width: 450px; text-align: center; 
             animation: fadeIn 0.4s ease; background: #666666;
@@ -68,82 +71,6 @@
     <h1>蝦皮賣得越好，你反而越窮？</h1>
     <p>15% 抽成 + 金流周轉 + 廣告成本 = 你的利潤全被平台吞了。</p>
     <div class="btn" onclick="next(1)">查看我的故事</div>
-</div>
-
-<div class="slide">
-    <h1>誰適合這套系統？</h1>
-    <div class="card">
-        ✅ 蝦皮電商新手 / 中手 / 老手<br>
-        ✅ 有明星商品、想變現的自媒體<br>
-        ❌ 不適合：大品牌與高流量賣家
-    </div>
-    <div class="btn" onclick="next(2)">戳痛點</div>
-</div>
-
-<div class="slide">
-    <h1>賣家三大絕望痛點</h1>
-    <div class="card">
-        1. 利潤壓縮（調低沒錢賺，調高沒人買）<br>
-        2. 廣告費燒不停（競爭太激烈）<br>
-        3. 金流週轉期（錢都在平台手上）
-    </div>
-    <div class="btn" onclick="next(3)">看懂真相</div>
-</div>
-
-<div class="slide">
-    <h1>平台撥款「環狀週轉」</h1>
-    <p>進貨 → 賣出 → 出貨 → 取貨 → 鑑賞期 → 撥款<br><br>單量越大，戶頭越空。</p>
-    <div class="btn" onclick="next(4)">看如何逆轉</div>
-</div>
-
-<div class="slide">
-    <h1>系統優勢</h1>
-    <p>簡單、快速、便宜。<br>免年費、免月租、免抽成。<br>買斷後全部是你的。</p>
-    <div class="btn" onclick="next(5)">借力引流</div>
-</div>
-
-<div class="slide">
-    <h1>借力打力：一秒轉私域</h1>
-    <p>不需要拋棄蝦皮，我們只是讓你的客戶，直接進到你自己的口袋。</p>
-    <div class="btn" onclick="next(6)">無壓力金流</div>
-</div>
-
-<div class="slide">
-    <h1>逆轉環狀圖</h1>
-    <p>買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br><br>「收到錢再訂貨」才是生存之道。</p>
-    <div class="btn" onclick="next(7)">關於我：小傑</div>
-</div>
-
-<div class="slide">
-    <h1>我的電商故事</h1>
-    <p>2017踏入自媒體，深知功能炫砲沒用。<br>簡單、快速、便宜，才是你的救命稻草。</p>
-    <div class="btn" onclick="next(8)">保固與維護</div>
-</div>
-
-<div class="slide">
-    <h1>一年保固・售後保障</h1>
-    <div class="card">
-        • 穩定重啟：7日內修復<br>
-        • 365天技術諮詢<br>
-        • 三次免費連結更新
-    </div>
-    <div class="btn" onclick="next(9)">選擇方案</div>
-</div>
-
-<div class="slide">
-    <h1>啟動方案</h1>
-    <div class="card">
-        A 基礎展示 $980<br>B 系統成交 $1,780<br>C 系列經營 $3,880<br>D 旗艦店鋪 $4,880<br>E 品牌官網 $5,980
-    </div>
-    <div class="btn" onclick="next(10)">確認付款</div>
-</div>
-
-<div class="slide">
-    <h1>付款與開通資料</h1>
-    <p style="font-size:0.9rem;">永豐銀行(807) 19201800126419<br>網癮中年企業社</p>
-    <img src="https://i.urusai.cc/It3DW.jpg" style="width:70px; margin:0 5px;">
-    <img src="https://i.urusai.cc/Y8wor.jpg" style="width:70px; margin:0 5px;">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true" style="width:100%; height:220px; border:none; border-radius:0px; margin-top:20px;"></iframe>
 </div>
 
 <script>
