@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAD SHOP｜清水模工業風架構</title>
+    <title>IAD SHOP｜中性灰水泥質感架構</title>
     <style>
-        /* 1. 大背景：深灰微漸層 (冷調商務) */
+        /* 1. 大背景：#555555 到 #3A3A3A 縱向漸層 */
         body { 
             margin: 0; 
-            background: linear-gradient(135deg, #374151, #1F2937);
+            background: linear-gradient(180deg, #555555 0%, #3A3A3A 100%);
             color: #FFFFFF; 
             font-family: 'Helvetica', 'Arial', '微軟正黑體', sans-serif; 
             height: 100vh; 
@@ -18,34 +18,34 @@
             overflow: hidden; 
         }
 
-        /* 2. 中間簡報卡片：淺中灰底 + 死直角細邊框 (無圓角、無陰影) */
+        /* 2. 中間簡報卡片：#888888 底色 + #A0A0A0 死直角細邊框 */
         .slide { 
             display: none; 
             width: 85%; 
             max-width: 450px; 
             text-align: center; 
             animation: fadeIn 0.4s ease; 
-            background: #4B5563;
+            background: #888888;
             padding: 50px 30px;
-            border: 1px solid #6B7280; /* 死直角細邊框 */
+            border: 1px solid #A0A0A0; /* 死直角細邊框 */
             box-sizing: border-box;
         }
         
         .slide.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         
-        /* 3. 文字色彩：高檔極粗體 */
+        /* 3. 文字色彩：純白極粗體 */
         h1 { font-size: 1.8rem; color: #FFFFFF; margin-bottom: 25px; font-weight: 900; letter-spacing: -0.5px; text-transform: uppercase; }
-        p { color: #D1D5DB; line-height: 1.7; margin-bottom: 25px; font-size: 1rem; }
-        .card { background: #374151; padding: 20px; border: 1px solid #6B7280; text-align: left; margin: 20px 0; font-size: 0.9rem; color: #E5E7EB; }
+        p { color: #FFFFFF; line-height: 1.7; margin-bottom: 25px; font-size: 1rem; opacity: 0.9; }
+        .card { background: #777777; padding: 20px; border: 1px solid #A0A0A0; text-align: left; margin: 20px 0; font-size: 0.9rem; color: #FFFFFF; }
         
-        /* 4. 按鈕：骨白底黑字，Hover 反轉 */
+        /* 4. 按鈕：純白底深灰字，Hover 與背景反轉 */
         .btn { 
-            background: #F9FAFB; color: #000000; padding: 16px 40px; 
+            background: #FFFFFF; color: #3A3A3A; padding: 16px 40px; 
             font-weight: 900; cursor: pointer; display: inline-block; margin-top: 20px;
             transition: 0.3s; text-transform: uppercase; border: none;
         }
-        .btn:hover { background: #000000; color: #FFFFFF; border: 1px solid #FFFFFF; }
+        .btn:hover { background: #3A3A3A; color: #FFFFFF; border: 1px solid #FFFFFF; }
     </style>
 </head>
 <body>
@@ -83,7 +83,7 @@
 </div>
 
 <div class="slide">
-    <h1>我們的系統優勢</h1>
+    <h1>系統優勢</h1>
     <p>簡單、快速、便宜。<br>免年費、免月租、免抽成。<br>買斷後全部是你的。</p>
     <div class="btn" onclick="next(5)">借力引流</div>
 </div>
@@ -95,7 +95,7 @@
 </div>
 
 <div class="slide">
-    <h1>我們的逆轉環狀圖</h1>
+    <h1>逆轉環狀圖</h1>
     <p>買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br><br>「收到錢再訂貨」才是生存之道。</p>
     <div class="btn" onclick="next(7)">關於我：小傑</div>
 </div>
@@ -117,7 +117,7 @@
 </div>
 
 <div class="slide">
-    <h1>選擇你的啟動方案</h1>
+    <h1>啟動方案</h1>
     <div class="card">
         A 基礎展示 $980<br>B 系統成交 $1,780<br>C 系列經營 $3,880<br>D 旗艦店鋪 $4,880<br>E 品牌官網 $5,980
     </div>
