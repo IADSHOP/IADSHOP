@@ -23,19 +23,20 @@
         h1 { font-size: 1.8rem; margin: 0; font-weight: 900; text-transform: uppercase; line-height: 1.2; }
         .card { background: #5a5a5a; padding: 20px; border: 1px solid #777777; margin: 10px 0; font-size: 0.9rem; color: #D4D4D4; width: 100%; box-sizing: border-box; }
         
-        /* 第1頁集中清單 */
         .list-group { margin: auto 0; line-height: 1.8; color: #D4D4D4; font-size: 0.95rem; }
         
-        /* 修改按鈕：左右留白 */
+        /* 針對第2頁的清單樣式 */
+        .list-style-none { text-align: left; line-height: 2.2; font-size: 0.95rem; width: 100%; }
+        
         .btn { background: #FFFFFF; color: #3A3A3A; padding: 16px 0; font-weight: 900; cursor: pointer; width: calc(100% - 40px); border: none; text-transform: uppercase; transition: 0.3s; margin-top: auto; }
         .btn:hover { background: #3A3A3A; color: #FFFFFF; border: 1px solid #FFFFFF; }
     </style>
 </head>
 <body>
 
-<div id="progress-bar" style="width: 10%;"></div>
+<div id="progress-bar" style="width: 12.5%;"></div>
 <div class="corner-mark top-left">IAD-PLAN // ARCHIVE</div>
-<div class="corner-mark bottom-right" id="page-num">01 / 10</div>
+<div class="corner-mark bottom-right" id="page-num">01 / 08</div>
 
 <div class="slide active">
     <h1>蝦皮賣得越好，<br>你反而越窮？</h1>
@@ -47,24 +48,25 @@
 
 <div class="slide">
     <h1>誰適合這套系統？</h1>
-    <div class="card" style="text-align: left; line-height: 2;">
-        蝦皮/電商新手<br>
-        蝦皮中手:曾經賣過高業績的<br>
-        蝦皮老手:想突破現狀或提高利潤<br>
+    <div class="card list-style-none">
+        ✅ 蝦皮/電商新手<br>
+        ✅ 蝦皮中手:曾經賣過高業績的<br>
+        ✅ 蝦皮老手:想突破現狀或提高利潤<br>
         <br>
-        不適合:大品牌與高流量賣家
+        ❌ 不適合:大品牌與高流量賣家
     </div>
-    <div class="btn" onclick="next(2)">戳痛點</div>
+    <div class="btn" onclick="next(2)">賣家的困境</div>
 </div>
 
-<div class="slide">
-    <h1 style="margin-bottom: auto;">賣家三大絕望痛點</h1>
-    <div class="card" style="text-align: left;">
+<div class="slide" style="justify-content: flex-start;">
+    <h1>賣家三大絕望痛點</h1>
+    <div class="card" style="text-align: left; margin-top: 20px;">
         1. 利潤壓縮（調低沒錢賺，調高沒人買）<br>
         2. 廣告費燒不停（競爭太激烈）<br>
         3. 金流週轉期（錢都在平台手上）
     </div>
-    <div class="btn" onclick="next(3)">看懂真相</div>
+    <div style="flex-grow: 1;"></div>
+    <div class="btn" onclick="next(3)">解決方案</div>
 </div>
 
 <div class="slide">
@@ -74,21 +76,15 @@
 </div>
 
 <div class="slide">
-    <h1>借力打力：一秒轉私域</h1>
-    <p>不需要拋棄蝦皮，我們只是讓你的客戶，直接進到你自己的口袋。</p>
-    <div class="btn" onclick="next(5)">無壓力金流</div>
-</div>
-
-<div class="slide">
     <h1>逆轉環狀圖</h1>
     <p>買家下單 → 即刻收款 → 再進貨 → 出貨 → 取貨<br><br>「收到錢再訂貨」才是生存之道。</p>
-    <div class="btn" onclick="next(6)">關於我：小傑</div>
+    <div class="btn" onclick="next(5)">關於我：小傑</div>
 </div>
 
 <div class="slide">
     <h1>我的電商故事</h1>
     <p>2017踏入自媒體，深知功能炫砲沒用。<br>簡單、快速、便宜，才是你的救命稻草。</p>
-    <div class="btn" onclick="next(7)">保固與維護</div>
+    <div class="btn" onclick="next(6)">保固與維護</div>
 </div>
 
 <div class="slide">
@@ -98,7 +94,7 @@
         • 365天技術諮詢<br>
         • 三次免費連結更新
     </div>
-    <div class="btn" onclick="next(8)">選擇方案</div>
+    <div class="btn" onclick="next(7)">選擇方案</div>
 </div>
 
 <div class="slide">
@@ -106,24 +102,15 @@
     <div class="card">
         A 基礎展示 $980<br>B 系統成交 $1,780<br>C 系列經營 $3,880<br>D 旗艦店鋪 $4,880<br>E 品牌官網 $5,980
     </div>
-    <div class="btn" onclick="next(9)">確認付款</div>
-</div>
-
-<div class="slide">
-    <h1>付款與開通資料</h1>
-    <p style="font-size:0.9rem;">永豐銀行(807) 19201800126419<br>網癮中年企業社</p>
-    <img src="https://i.urusai.cc/It3DW.jpg" style="width:50px; margin:5px;">
-    <img src="https://i.urusai.cc/Y8wor.jpg" style="width:50px; margin:5px;">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecoAEe7VmU3IG680demJP2ewrN5kZMPvUOiacOPeg3hMpdEQ/viewform?embedded=true" style="width:100%; height:150px; border:none;"></iframe>
-    <div class="btn" onclick="next(0)">回首頁</div>
+    <div class="btn" onclick="next(0)">確認付款</div>
 </div>
 
 <script>
     function next(n) {
         document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
         document.querySelectorAll('.slide')[n].classList.add('active');
-        document.getElementById('progress-bar').style.width = ((n + 1) / 10) * 100 + "%";
-        document.getElementById('page-num').innerText = String(n + 1).padStart(2, '0') + " / 10";
+        document.getElementById('progress-bar').style.width = ((n + 1) / 8) * 100 + "%";
+        document.getElementById('page-num').innerText = String(n + 1).padStart(2, '0') + " / 08";
     }
 </script>
 </body>
