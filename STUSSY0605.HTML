@@ -154,7 +154,7 @@
         <div class="section-title">尺寸表與詳細規格</div>
         <p style="font-size: 14px; color: #555; margin-bottom: 12px;">由於本次新品款式眾多，確認尺寸表及看更多試穿報告請直接聯絡客服：</p>
         <a href="https://qr-official.line.me/gs/M_006xovnz_GW.png?oat_content=qr" target="_blank" class="line-link-btn">
-            💬 點選查詢尺寸表：LINEID:@006xovnz
+            💬 訊息客服詢問貨況：LINEID:@006xovnz
         </a>
     </div>
 
@@ -226,7 +226,17 @@
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
 
-    // 評價區自動輪播 (3秒一次)
+    // 1. 最上方新品商品主圖自動輪播 (3秒一次)
+    const mainCarousel = document.getElementById('main');
+    setInterval(() => {
+        if (mainCarousel.scrollLeft + mainCarousel.clientWidth >= mainCarousel.scrollWidth - 10) {
+            mainCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            mainCarousel.scrollBy({ left: mainCarousel.clientWidth, behavior: 'smooth' });
+        }
+    }, 3000);
+
+    // 2. 蝦皮評價區自動輪播 (3秒一次)
     const reviewCarousel = document.getElementById('reviews');
     setInterval(() => {
         if (reviewCarousel.scrollLeft + reviewCarousel.clientWidth >= reviewCarousel.scrollWidth - 10) {
