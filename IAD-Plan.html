@@ -30,6 +30,9 @@
         
         .btn { background: #FFFFFF; color: #3A3A3A; padding: 16px 0; font-weight: 900; cursor: pointer; width: calc(100% - 40px); border: none; text-transform: uppercase; transition: 0.3s; margin-top: auto; }
         .btn:hover { background: #3A3A3A; color: #FFFFFF; border: 1px solid #FFFFFF; }
+        
+        /* 新增樣式 */
+        .sub-text { font-size: 0.8rem; color: #aaaaaa; font-weight: normal; margin-left: 8px; }
     </style>
 </head>
 <body>
@@ -38,7 +41,6 @@
 <div class="corner-mark top-left">IAD-PLAN // ARCHIVE</div>
 <div class="corner-mark bottom-right" id="page-num">01 / 08</div>
 
-<!-- 第一頁 -->
 <div class="slide active" style="justify-content: space-between;">
     <h1 class="big-title">蝦皮賣得越好，<br>你反而越窮？</h1>
     <div class="list-group">
@@ -47,7 +49,6 @@
     <div class="btn" onclick="next(1)">如何破局？</div>
 </div>
 
-<!-- 第二頁 -->
 <div class="slide">
     <h1>誰適合這套系統？</h1>
     <div class="card list-style-none">
@@ -64,7 +65,6 @@
     <div class="btn" onclick="next(2)">賣家的困境</div>
 </div>
 
-<!-- 第三頁 -->
 <div class="slide" style="justify-content: flex-start;">
     <h1>賣家困境</h1>
     <div class="card" style="margin-top: 20px;">
@@ -73,29 +73,26 @@
         3. 金流週轉超久，經常墊錢舖貨<br>
         4. 其他人事物雜費越來越高
     </div>
-    <img src="https://i.urusai.cc/aiYyH.png" style="width: 90%; margin: 20px auto; background: transparent;">
+    <img src="https://i.urusai.cc/SL1ei.png" style="width: 90%; margin: 20px auto; background: transparent;">
     <div style="flex-grow: 1;"></div>
     <div class="btn" onclick="next(3)">解決方案</div>
 </div>
 
-<!-- 第四頁 -->
 <div class="slide">
     <h1>我們的系統優勢</h1>
     <div class="card" style="text-align: center;">
-        <strong style="color: #FFFFFF;">痛一次就好</strong><br>
-        一次性買斷<br>
+        <strong style="color: #FFFFFF;">一次性買斷 <span class="sub-text">最低方案$980</span></strong><br>
         免年費<br>
         免月租<br>
         免抽成<br><br>
-        <strong style="color: #FFFFFF;">借力打力</strong><br>
+        <strong style="color: #FFFFFF;">借力使力 <span class="sub-text">把蝦皮流量最大化</span></strong><br>
         依附蝦皮流量<br>
-        我們提供實體物件輔助<br>
-        奪回你被蝦皮抽成的所有流量
+        把你付的平台.廣告費最大化使用<br>
+        我們提供實體物件輔助
     </div>
     <div class="btn" onclick="next(4)">零囤貨完美金流</div>
 </div>
 
-<!-- 第五頁 -->
 <div class="slide" style="text-align: left;">
     <h1 style="text-align: center; font-size: 1.4rem; margin-bottom: 20px;">─ 現貨優惠制：極速現金流 ─</h1>
     <div class="card" style="font-size: 0.85rem;">
@@ -111,14 +108,12 @@
     <div class="btn" onclick="next(5)">關於我：小傑</div>
 </div>
 
-<!-- 第六頁 -->
 <div class="slide">
     <h1>我的電商故事</h1>
     <p>2017踏入自媒體，深知功能炫砲沒用。<br>簡單、快速、便宜，才是你的救命稻草。</p>
     <div class="btn" onclick="next(6)">保固與維護</div>
 </div>
 
-<!-- 第七頁 -->
 <div class="slide">
     <h1>一年保固・售後保障</h1>
     <div class="card">
@@ -129,7 +124,6 @@
     <div class="btn" onclick="next(7)">選擇方案</div>
 </div>
 
-<!-- 第八頁 -->
 <div class="slide">
     <h1>啟動方案</h1>
     <div class="card">
