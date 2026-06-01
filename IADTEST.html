@@ -5,55 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAD SHOP | 官方訂購頁</title>
     <style>
-        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background-color: #f8f8f8; }
+        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background-color: #f8f8f8; padding-top: 130px; }
+        
+        /* 固定頂部區塊 */
+        .fixed-top { position: fixed; top: 0; width: 100%; max-width: 600px; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .header { background: #000; color: #fff; text-align: center; padding: 15px; font-weight: 900; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; gap: 15px; }
+        .social-link img { width: 30px; height: 30px; cursor: pointer; transition: transform 0.2s; }
+        .social-link img:hover { transform: scale(1.1); }
+        
+        .banner { background: #ff4d4d; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; }
+        
         .container { max-width: 600px; margin: 0 auto; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        .header { background: #000; color: #fff; text-align: center; padding: 20px; font-weight: 900; letter-spacing: 2px; }
-        .banner { background: #ff4d4d; color: #fff; text-align: center; padding: 12px; font-weight: bold; }
         .section { padding: 20px; border-bottom: 1px solid #eee; position: relative; }
         .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
         
-        /* 基礎滑動容器與箭頭 */
         .carousel-container { position: relative; width: 100%; overflow: hidden; }
         .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; scrollbar-width: none; }
         .carousel::-webkit-scrollbar { display: none; }
+        .carousel img { flex: 0 0 100%; width: 100%; height: auto; object-fit: contain; scroll-snap-align: start; border-radius: 8px; }
         
-        /* 主商品圖與尺寸圖 */
-        .carousel img { 
-            flex: 0 0 100%; 
-            width: 100%; 
-            height: auto; 
-            object-fit: contain; 
-            scroll-snap-align: start; 
-            border-radius: 8px; 
-        }
-        
-        /* 評價專用 */
-        .review-carousel img {
-            flex: 0 0 100%;
-            width: 100%;
-            max-height: 160px; 
-            object-fit: contain; 
-            background-color: #fff;
-            scroll-snap-align: start;
-            border-radius: 6px;
-        }
+        .review-carousel img { flex: 0 0 100%; width: 100%; max-height: 160px; object-fit: contain; background-color: #fff; scroll-snap-align: start; border-radius: 6px; }
 
-        .shopee-review-link {
-            display: block;
-            background-color: #000; 
-            border: 2px solid #ff4d4d; 
-            color: #fff; 
-            text-align: center;
-            padding: 12px 15px;
-            font-size: 14px; 
-            font-weight: bold; 
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            text-decoration: none;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s;
-        }
+        .shopee-review-link { display: block; background-color: #000; border: 2px solid #ff4d4d; color: #fff; text-align: center; padding: 12px 15px; font-size: 14px; font-weight: bold; letter-spacing: 1px; margin-bottom: 15px; text-decoration: none; border-radius: 6px; transition: all 0.2s; }
         
         .arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 12px 16px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10; }
         .arrow.prev { left: 10px; }
@@ -66,27 +39,25 @@
         .notice-list { padding-left: 20px; margin: 10px 0; font-size: 14px; color: #555; line-height: 1.8; }
         .price-list { list-style-type: none; padding-left: 0; margin: 10px 0; font-size: 14px; color: #333; line-height: 1.8; }
         .highlight { color: #ff4d4d; font-weight: bold; }
-
-        .sms-notice-box { 
-            margin: 20px 0 10px 0; 
-            padding: 12px; 
-            background-color: #fff0f0; 
-            border: 1px solid #ffcccc; 
-            border-radius: 6px; 
-            font-size: 16px; 
-            color: #ff4d4d; 
-            font-weight: bold;
-            line-height: 1.6; 
-            text-align: center; 
-        }
+        .sms-notice-box { margin: 20px 0 10px 0; padding: 12px; background-color: #fff0f0; border: 1px solid #ffcccc; border-radius: 6px; font-size: 16px; color: #ff4d4d; font-weight: bold; line-height: 1.6; text-align: center; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header">IAD SHOP</div>
+<div class="fixed-top">
+    <div class="header">
+        <a href="https://qr-official.line.me/gs/M_006xovnz_GW.png?oat_content=qr" target="_blank" class="social-link">
+            <img src="https://i.urusai.cc/DjriE.png" alt="LINE">
+        </a>
+        <span>IAD SHOP</span>
+        <a href="https://www.instagram.com/iad.shop" target="_blank" class="social-link">
+            <img src="https://i.urusai.cc/5oyCt.png" alt="IG">
+        </a>
+    </div>
     <div class="banner">VIP專屬直購優惠價 2件$449免運</div>
+</div>
 
+<div class="container">
     <div class="section">
         <div class="section-title">LINE客服ID:@006xovnz</div>
         <div class="carousel-container">
@@ -150,23 +121,14 @@
             <li>2件：<span class="highlight">$449 (免運)</span></li>
             <li>3件以上：單件 <span class="highlight">$225 (免運)</span></li>
         </ul>
-        <p style="font-size: 14px; color: #333; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">
-            📌 請依下方數量對應金額付款購買
-        </p>
-        <p style="font-size: 13px; color: #ff4d4d; font-weight: bold; margin-top: 0; margin-bottom: 15px;">
-            ⚠️ 付款金額不正確，退款將收取 $15 轉帳手續費。
-        </p>
+        <p style="font-size: 14px; color: #333; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">📌 請依下方數量對應金額付款購買</p>
+        <p style="font-size: 13px; color: #ff4d4d; font-weight: bold; margin-top: 0; margin-bottom: 15px;">⚠️ 付款金額不正確，退款將收取 $15 轉帳手續費。</p>
         
         <div style="font-size: 16px; font-weight: bold; margin-top: 25px; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;">選擇付款方式</div>
 
         <div class="payment-box">
             <h3>轉帳匯款 (完成後下方填寫帳號後4碼)</h3>
-            <p style="font-size: 14px; color: #555; line-height: 1.8;">
-                永豐銀行 代號807<br>
-                帳號：19201800126419<br>
-                戶名：網癮中年企業社<br>
-                1. 轉帳完成付款與填寫資料
-            </p>
+            <p style="font-size: 14px; color: #555; line-height: 1.8;">永豐銀行 代號807<br>帳號：19201800126419<br>戶名：網癮中年企業社<br>1. 轉帳完成付款與填寫資料</p>
         </div>
         <div class="payment-box">
             <h3>LINEPAY付款 (完成後下方填寫手機後3碼)</h3>
