@@ -38,7 +38,7 @@
 
 <div id="progress-bar"></div>
 <div class="corner-mark top-left">IAD-PLAN // ARCHIVE</div>
-<div class="corner-mark bottom-right" id="page-num">01 / 07</div>
+<div class="corner-mark bottom-right" id="page-num">01 / 08</div>
 
 <div class="slide active">
     <h1 class="big-title">蝦皮賣得越好，<br>你反而越窮？</h1>
@@ -73,7 +73,19 @@
         4. 其他人事物雜費越來越高
     </div>
     <img src="https://i.urusai.cc/SL1ei.png" style="width: 100%; max-height: 200px; object-fit: contain; margin: 10px 0;">
-    <div class="btn" onclick="next(3)">解決方案</div>
+    <div class="btn" onclick="next(3)">無效導流</div>
+</div>
+
+<div class="slide">
+    <h1>無效導流官網</h1>
+    <div class="card" style="line-height: 1.8;">
+        花了高額的年費/月租買官網?<br>
+        花了一大堆時間去上架搬運產品<br>
+        花了一堆心思去做會員制度專屬優惠<br>
+        價格比蝦皮賣場低<br>
+        就是沒人買?
+    </div>
+    <div class="btn" onclick="next(4)">我們的優勢</div>
 </div>
 
 <div class="slide">
@@ -86,7 +98,7 @@
         把你付的平台.廣告費最大化使用<br>
         我們提供實體物件輔助
     </div>
-    <div class="btn" onclick="next(4)">建立金流優勢</div>
+    <div class="btn" onclick="next(5)">超直覺一頁式結帳</div>
 </div>
 
 <div class="slide">
@@ -105,7 +117,7 @@
         →利潤 90 元 <br>
         →立即收款
     </div>
-    <div class="btn" onclick="next(5)">預購金流優勢</div>
+    <div class="btn" onclick="next(6)">預購金流優勢</div>
 </div>
 
 <div class="slide">
@@ -119,28 +131,25 @@
         →利潤30 元<br>
         →收款後叫貨
     </div>
-    <div class="btn" onclick="next(6)">保固與維護</div>
+    <div class="btn" onclick="next(7)">保固與維護</div>
 </div>
 
 <div class="slide">
-    <h1>一年保固・售後保障</h1>
+    <h1>啟動方案</h1>
     <div class="card">
-        • 穩定重啟：7日內修復<br>
-        • 365天技術諮詢<br>
-        • 三次免費連結更新
+        A 基礎展示 $980<br>B 系統成交 $1,780<br>C 系列經營 $3,880<br>D 旗艦店鋪 $4,880<br>E 品牌官網 $5,980
     </div>
     <div class="btn" onclick="next(0)">確認付款</div>
 </div>
 
 <script>
-    const totalSlides = 7;
+    const totalSlides = 8;
     function next(n) {
         document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
         document.querySelectorAll('.slide')[n].classList.add('active');
         document.getElementById('progress-bar').style.width = ((n + 1) / totalSlides) * 100 + "%";
         document.getElementById('page-num').innerText = String(n + 1).padStart(2, '0') + " / 0" + totalSlides;
     }
-    // 初始化
     next(0);
 </script>
 </body>
