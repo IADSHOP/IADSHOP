@@ -32,13 +32,14 @@
         .btn:hover { background: #3A3A3A; color: #FFFFFF; border: 1px solid #FFFFFF; }
         
         .sub-text { font-size: 0.75rem; color: #aaaaaa; font-weight: normal; display: block; margin-top: 4px; }
+        .flex-container { display: flex; align-items: center; gap: 15px; width: 100%; margin-top: 10px; }
     </style>
 </head>
 <body>
 
 <div id="progress-bar"></div>
 <div class="corner-mark top-left">IAD-PLAN // ARCHIVE</div>
-<div class="corner-mark bottom-right" id="page-num">01 / 09</div>
+<div class="corner-mark bottom-right" id="page-num">01 / 10</div>
 
 <div class="slide active">
     <h1 class="big-title">蝦皮賣得越好，<br>你反而越窮？</h1>
@@ -82,10 +83,9 @@
         花了高額的年費/月租買官網?<br>
         花了一大堆時間去上架搬運產品<br>
         花了一堆心思去做會員制度專屬優惠<br>
-        價格比蝦皮賣場低<br>
-        就是沒人買?
+        價格比蝦皮賣場低 就是沒人買?
     </div>
-    <img src="https://i.urusai.cc/frWaK.png" style="width: 100%; margin: 10px 0; border: 1px solid #777777;">
+    <img src="https://i.urusai.cc/frWaK.png" style="width: 90%; margin-top: -5px; border: 1px solid #777777; object-fit: contain;">
     <div class="btn" onclick="next(4)">我們的優勢</div>
 </div>
 
@@ -100,6 +100,22 @@
         我們提供實體物件輔助
     </div>
     <div class="btn" onclick="next(5)">直覺式導流</div>
+</div>
+
+<div class="slide">
+    <h1>超直覺一頁式結帳</h1>
+    <div class="flex-container">
+        <div class="card" style="text-align: left; font-size: 0.85rem; width: 60%;">
+            一頁式展示優勢:<br>
+            • 免去繁冗的官網會員註冊<br>
+            • 刪除無效的官網多產品資訊<br>
+            • 一眼展示產品重點<br>
+            • 一頁完成選購結帳<br>
+            • 買家更高意願回購
+        </div>
+        <img src="https://i.urusai.cc/frWaK.png" style="width: 35%; border: 1px solid #777777;">
+    </div>
+    <div class="btn" onclick="next(6)">現貨現金流</div>
 </div>
 
 <div class="slide">
@@ -118,7 +134,7 @@
         →利潤 90 元 <br>
         →立即收款
     </div>
-    <div class="btn" onclick="next(6)">預購金流優勢</div>
+    <div class="btn" onclick="next(7)">預購金流優勢</div>
 </div>
 
 <div class="slide">
@@ -132,7 +148,7 @@
         →利潤30 元<br>
         →收款後叫貨
     </div>
-    <div class="btn" onclick="next(7)">保固與維護</div>
+    <div class="btn" onclick="next(8)">保固與維護</div>
 </div>
 
 <div class="slide">
@@ -142,7 +158,7 @@
         • 365天技術諮詢<br>
         • 三次免費連結更新
     </div>
-    <div class="btn" onclick="next(8)">選擇方案</div>
+    <div class="btn" onclick="next(9)">選擇方案</div>
 </div>
 
 <div class="slide">
@@ -154,14 +170,15 @@
 </div>
 
 <script>
-    const totalSlides = 9;
+    const totalSlides = 10;
     function next(n) {
         document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
         document.querySelectorAll('.slide')[n].classList.add('active');
         document.getElementById('progress-bar').style.width = ((n + 1) / totalSlides) * 100 + "%";
-        document.getElementById('page-num').innerText = String(n + 1).padStart(2, '0') + " / 0" + totalSlides;
+        document.getElementById('page-num').innerText = String(n + 1).padStart(2, '0') + " / " + String(totalSlides).padStart(2, '0');
     }
     next(0);
 </script>
 </body>
 </html>
+```[cite: 6]
