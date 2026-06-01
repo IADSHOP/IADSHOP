@@ -38,7 +38,7 @@
 
 <div id="progress-bar"></div>
 <div class="corner-mark top-left">IAD-PLAN // ARCHIVE</div>
-<div class="corner-mark bottom-right" id="page-num">01 / 08</div>
+<div class="corner-mark bottom-right" id="page-num">01 / 09</div>
 
 <div class="slide active">
     <h1 class="big-title">蝦皮賣得越好，<br>你反而越窮？</h1>
@@ -85,6 +85,7 @@
         價格比蝦皮賣場低<br>
         就是沒人買?
     </div>
+    <img src="https://i.urusai.cc/frWaK.png" style="width: 100%; margin: 10px 0; border: 1px solid #777777;">
     <div class="btn" onclick="next(4)">我們的優勢</div>
 </div>
 
@@ -98,7 +99,7 @@
         把你付的平台.廣告費最大化使用<br>
         我們提供實體物件輔助
     </div>
-    <div class="btn" onclick="next(5)">超直覺一頁式結帳</div>
+    <div class="btn" onclick="next(5)">直覺式導流</div>
 </div>
 
 <div class="slide">
@@ -135,6 +136,16 @@
 </div>
 
 <div class="slide">
+    <h1>一年保固・售後保障</h1>
+    <div class="card">
+        • 穩定重啟：7日內修復<br>
+        • 365天技術諮詢<br>
+        • 三次免費連結更新
+    </div>
+    <div class="btn" onclick="next(8)">選擇方案</div>
+</div>
+
+<div class="slide">
     <h1>啟動方案</h1>
     <div class="card">
         A 基礎展示 $980<br>B 系統成交 $1,780<br>C 系列經營 $3,880<br>D 旗艦店鋪 $4,880<br>E 品牌官網 $5,980
@@ -143,7 +154,7 @@
 </div>
 
 <script>
-    const totalSlides = 8;
+    const totalSlides = 9;
     function next(n) {
         document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
         document.querySelectorAll('.slide')[n].classList.add('active');
