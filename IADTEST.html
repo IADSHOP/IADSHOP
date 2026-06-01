@@ -8,10 +8,11 @@
         body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background-color: #f8f8f8; padding-top: 130px; }
         
         /* 固定頂部區塊 */
-        .fixed-top { position: fixed; top: 0; width: 100%; max-width: 600px; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .header { background: #000; color: #fff; text-align: center; padding: 15px; font-weight: 900; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; gap: 15px; }
-        .social-link img { width: 30px; height: 30px; cursor: pointer; transition: transform 0.2s; }
+        .fixed-top { position: fixed; top: 0; width: 100%; max-width: 600px; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); left: 50%; transform: translateX(-50%); }
+        .header { background: #000; color: #fff; text-align: center; padding: 15px 20px; font-weight: 900; letter-spacing: 2px; display: flex; align-items: center; justify-content: space-between; }
+        .social-link img { width: 30px; height: 30px; cursor: pointer; transition: transform 0.2s; display: block; }
         .social-link img:hover { transform: scale(1.1); }
+        .header-title { flex-grow: 1; text-align: center; }
         
         .banner { background: #ff4d4d; color: #fff; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; }
         
@@ -49,7 +50,7 @@
         <a href="https://qr-official.line.me/gs/M_006xovnz_GW.png?oat_content=qr" target="_blank" class="social-link">
             <img src="https://i.urusai.cc/DjriE.png" alt="LINE">
         </a>
-        <span>IAD SHOP</span>
+        <div class="header-title">IAD SHOP</div>
         <a href="https://www.instagram.com/iad.shop" target="_blank" class="social-link">
             <img src="https://i.urusai.cc/5oyCt.png" alt="IG">
         </a>
