@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAD SHOP | 官方訂購頁</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background-color: #f8f8f8; padding-top: 130px; }
+        
+        /* 固定頂部區塊 */
+        .fixed-top { position: fixed; top: 0; width: 100%; max-width: 600px; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); left: 50%; transform: translateX(-50%); }
+        .header { background: #000; color: #fff; text-align: center; padding: 15px 20px; font-weight: 900; letter-spacing: 2px; display: flex; align-items: center; justify-content: space-between; }
+        .social-link img { width: 30px; height: 30px; cursor: pointer; transition: transform 0.2s; display: block; }
+        .social-link img:hover { transform: scale(1.1); }
+        .header-title { flex-grow: 1; text-align: center; }
+        
+        .banner { background: #ff4d4d; color: #fff; text-align: center; padding: 10px; font-weight: bold; }
+        .banner-main { font-size: 16px; }
+        .banner-sub { font-size: 13px; margin-top: 2px; opacity: 0.9; }
+        
+        .container { max-width: 600px; margin: 0 auto; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        .section { padding: 20px; border-bottom: 1px solid #eee; position: relative; }
+        .section-title { font-size: 18px; font-weight: bold; margin-bottom: 15px; border-left: 4px solid #000; padding-left: 10px; }
+        
+        .carousel-container { position: relative; width: 100%; overflow: hidden; }
+        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; scrollbar-width: none; }
+        .carousel::-webkit-scrollbar { display: none; }
+        .carousel img { flex: 0 0 100%; width: 100%; height: auto; object-fit: contain; scroll-snap-align: start; border-radius: 8px; }
+        
+        .review-carousel img { flex: 0 0 100%; width: 100%; max-height: 160px; object-fit: contain; background-color: #fff; scroll-snap-align: start; border-radius: 6px; }
+
+        .shopee-review-link { display: block; background-color: #000; border: 2px solid #ff4d4d; color: #fff; text-align: center; padding: 12px 15px; font-size: 14px; font-weight: bold; letter-spacing: 1px; margin-bottom: 15px; text-decoration: none; border-radius: 6px; transition: all 0.2s; }
+        
+        .arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.4); color: white; border: none; padding: 12px 16px; cursor: pointer; border-radius: 50%; font-size: 18px; z-index: 10; }
+        .arrow.prev { left: 10px; }
+        .arrow.next { right: 10px; }
+
+        .payment-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .qr-code { width: 100%; max-width: 200px; display: block; margin: 10px auto; }
+        iframe { width: 100%; height: 2206px; border: none; }
+        
+        .notice-list { padding-left: 20px; margin: 10px 0; font-size: 14px; color: #555; line-height: 1.8; }
+        .price-list { list-style-type: none; padding-left: 0; margin: 10px 0; font-size: 14px; color: #333; line-height: 1.8; }
+        .highlight { color: #ff4d4d; font-weight: bold; }
+        .sms-notice-box { margin: 20px 0 10px 0; padding: 12px; background-color: #fff0f0; border: 1px solid #ffcccc; border-radius: 6px; font-size: 16px; color: #ff4d4d; font-weight: bold; line-height: 1.6; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="fixed-top">
+    <div class="header">
+        <a href="https://line.me/R/ti/p/@006xovnz" target="_blank" class="social-link">
+            <img src="https://i.urusai.cc/DjriE.png" alt="LINE">
+        </a>
+        <div class="header-title">IAD SHOP</div>
+        <a href="https://www.instagram.com/iad.shop" target="_blank" class="social-link">
+            <img src="https://i.urusai.cc/5oyCt.png" alt="IG">
+        </a>
+    </div>
+    <div class="banner">
+        <div class="banner-main">WASHED FITTED TOP 2for$649免運</div>
+        <div class="banner-sub">熱賣 美式水洗螺紋棉短版Tee</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="section-title">LINE客服ID:@006xovnz</div>
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('main', -1)">❮</button>
+            <div class="carousel" id="main">
+                <img src="https://i.urusai.cc/eLeef.jfif">
+                <img src="https://i.urusai.cc/fpsqa.jfif">
+                <img src="https://i.urusai.cc/svNZP.jfif">
+                <img src="https://i.urusai.cc/d0HtJ.jfif">
+                <img src="https://i.urusai.cc/QlIhH.jfif">
+                <img src="https://i.urusai.cc/pVj8E.jfif">
+                <img src="https://i.urusai.cc/6YieD.jfif">
+                <img src="https://i.urusai.cc/FsbGA.jfif">
+                <img src="https://i.urusai.cc/WtoqC.jfif">
+                <img src="https://i.urusai.cc/LkZBu.jfif">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('main', 1)">❯</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <a href="https://s.shopee.tw/6VLHorudQx" target="_blank" class="shopee-review-link">
+            🛍️ 蝦皮真實評價・點選可進入蝦皮頁面
+        </a>
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('reviews', -1)">❮</button>
+            <div class="carousel review-carousel" id="reviews">
+                <img src="https://i.urusai.cc/3RHdL.jpg">
+                <img src="https://i.urusai.cc/B3S2o.jpg">
+                <img src="https://i.urusai.cc/bThbt.jpg">
+                <img src="https://i.urusai.cc/Q4OPY.jpg">
+                <img src="https://i.urusai.cc/twUSZ.jpg">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('reviews', 1)">❯</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">尺寸表與試穿報告</div>
+        <div class="carousel-container">
+            <button class="arrow prev" onclick="scrollSlide('size', -1)">❮</button>
+            <div class="carousel" id="size">
+                <img src="https://i.urusai.cc/wvq1F.jfif">
+                <img src="https://i.urusai.cc/9AHGZ.jfif">
+            </div>
+            <button class="arrow next" onclick="scrollSlide('size', 1)">❯</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">購買須知</div>
+        <ul class="notice-list">
+            <li>付款後 4-9 個工作天送達。</li>
+            <li>如遇特殊不可抗因素缺貨，將依填寫帳號退款。</li>
+            <li>退款工作時間為 2-5 個工作天。</li>
+            <li>訂單"出貨"將以簡訊通知 (到貨時超商會再通知)</li>
+            <li>可以加入官方LINE後傳送付款截圖(訊息通知)</li>
+        </ul>
+
+        <div style="font-size: 15px; font-weight: bold; margin-top: 15px; margin-bottom: 5px;">VIP優惠價格說明：</div>
+        <ul class="price-list">
+            <li>1件：$380 (免運)</li>
+            <li>2件：$649 (免運)</li>
+            <li>3件：$970 (免運)</li>
+            <li>4件：$1280 (免運)</li>
+            <li>5件：$1580 (免運)</li>
+            <li>5件以上請私訊LINE購買</li>
+        </ul>
+        <p style="font-size: 14px; color: #333; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">📌 請依下方數量對應金額付款購買</p>
+        <p style="font-size: 13px; color: #ff4d4d; font-weight: bold; margin-top: 0; margin-bottom: 15px;">⚠️ 付款金額不正確，退款將收取 $15 轉帳手續費。</p>
+
+        <p style="font-size: 14px; line-height: 1.6; color: #333; margin-top: 15px;">
+            <strong style="color: #000;">【安心保障】</strong> 商品出貨皆全程錄影，保障雙方權益<br>
+            <strong style="color: #000;">【退換貨說明】</strong>如遇重大瑕疵(如大面積破損.嚴重髒污)一律免費協助更換<br><br>
+            <strong style="color: #000;">【重要提示】</strong><br>
+            商品皆為「VIP專屬預購特惠價」，因此「除重大瑕疵外，其餘尺寸不合、個人喜好、色差」等問題，恕不接受退換貨。下單即代表同意本賣場規範。
+        </p>
+        
+        <div style="font-size: 16px; font-weight: bold; margin-top: 25px; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 5px;">選擇付款方式</div>
+
+        <div class="payment-box">
+            <h3>轉帳匯款 (完成後下方填寫帳號後4碼)</h3>
+            <p style="font-size: 14px; color: #555; line-height: 1.8;">永豐銀行 代號807<br>帳號：19201800126419<br>戶名：網癮中年企業社<br>1. 轉帳完成付款與填寫資料</p>
+        </div>
+        <div class="payment-box">
+            <h3>LINEPAY付款 (完成後下方填寫手機後3碼)</h3>
+            <p style="color: #ff4d4d; font-size: 13px; font-weight: bold; margin: -5px 0 10px 0;">#長按圖片可直接跳轉</p>
+            <img src="https://i.urusai.cc/It3DW.jpg" class="qr-code">
+            <p style="font-size: 14px; color: #555; line-height: 1.8;">1. 掃描QRCODE<br>2. 輸入付款金額<br>3. 完成付款</p>
+        </div>
+        <div class="payment-box">
+            <h3>信用卡付款 (完成後下方填寫卡號後4碼)</h3>
+            <p style="color: #ff4d4d; font-size: 13px; font-weight: bold; margin: -5px 0 10px 0;">#使用合作銀行電子錢包/行動支付 APP掃描即可刷卡</p>
+            <img src="https://i.urusai.cc/Y8wor.jpg" class="qr-code">
+            <p style="font-size: 14px; color: #555; line-height: 1.8;">1. 掃描QRCODE<br>2. 輸入付款金額<br>3. 完成付款與填寫資料</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 style="text-align:center;">📝 填寫訂單資訊</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfgp16FrfNKwbDr0HSGN7MLzbbcfoxmyHsxNf9HRqDj63Zr4A/viewform?embedded=true">載入中…</iframe>
+        
+        <div class="sms-notice-box">
+            訂單出貨將以簡訊通知<br>
+            也可加入官方LINE後傳送付款截圖(訊息通知)
+        </div>
+    </div>
+</div>
+
+<script>
+    function scrollSlide(id, direction) {
+        const container = document.getElementById(id);
+        const scrollAmount = container.clientWidth * direction;
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+
+    const reviewCarousel = document.getElementById('reviews');
+    setInterval(() => {
+        if (reviewCarousel.scrollLeft + reviewCarousel.clientWidth >= reviewCarousel.scrollWidth - 10) {
+            reviewCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            reviewCarousel.scrollBy({ left: reviewCarousel.clientWidth, behavior: 'smooth' });
+        }
+    }, 3000);
+
+    const sizeCarousel = document.getElementById('size');
+    setInterval(() => {
+        if (sizeCarousel.scrollLeft + sizeCarousel.clientWidth >= sizeCarousel.scrollWidth - 10) {
+            sizeCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+            sizeCarousel.scrollBy({ left: sizeCarousel.clientWidth, behavior: 'smooth' });
+        }
+    }, 3000);
+</script>
+
+</body>
+</html>
